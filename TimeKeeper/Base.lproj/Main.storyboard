@@ -38,9 +38,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="r2H-Xu-dhk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="This Week" image="Test - Home Icon" largeContentSizeImage="Test - Home Icon" id="Wgw-vv-Er8">
-                        <inset key="imageInsets" minX="25" minY="25" maxX="25" maxY="25"/>
-                    </tabBarItem>
+                    <tabBarItem key="tabBarItem" title="This Week" image="Home Icon Tab" largeContentSizeImage="Test - Home Icon" id="Wgw-vv-Er8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekk-up-ER0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,6 +102,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Home Icon Tab" width="25" height="25"/>
         <image name="Test - Home Icon" width="128" height="128"/>
         <image name="Test - Jobs Icon" width="128" height="128"/>
         <image name="Test - Report Icon" width="128" height="128"/>
