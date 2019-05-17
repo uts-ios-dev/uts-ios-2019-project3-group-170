@@ -83,15 +83,17 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5h 23min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Yi-XaN">
-                                <rect key="frame" x="0.0" y="109" width="414" height="71"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5h 23min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Yi-XaN">
+                                <rect key="frame" x="0.0" y="114.66666666666669" width="414" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="e25-Yi-XaN" secondAttribute="height" multiplier="69:10" id="xQh-WQ-BtW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSY-i5-TVA">
-                                <rect key="frame" x="20" y="713" width="80" height="80"/>
+                                <rect key="frame" x="20" y="733" width="60" height="60"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="Save Button">
                                     <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,6 +101,13 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="e25-Yi-XaN" firstAttribute="centerY" secondItem="Gxa-TU-SXZ" secondAttribute="centerY" priority="750" constant="-303.5" id="2C4-jw-VH1"/>
+                            <constraint firstItem="e25-Yi-XaN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ys8-TL-Nac" secondAttribute="top" id="U2d-n7-6rl"/>
+                            <constraint firstItem="e25-Yi-XaN" firstAttribute="trailing" secondItem="Ys8-TL-Nac" secondAttribute="trailing" id="UQ8-Lt-YQN"/>
+                            <constraint firstItem="e25-Yi-XaN" firstAttribute="centerX" secondItem="Gxa-TU-SXZ" secondAttribute="centerX" id="Z7j-Ee-I04"/>
+                            <constraint firstItem="e25-Yi-XaN" firstAttribute="leading" secondItem="Ys8-TL-Nac" secondAttribute="leading" id="yOx-93-yM3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Ys8-TL-Nac"/>
                     </view>
                     <navigationItem key="navigationItem" title="Manual Time Entry" id="MCH-dM-vc5"/>
