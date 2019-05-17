@@ -17,15 +17,20 @@ class SettingsViewController: UIViewController {
     
     //var settings: Settings = loadSettings()
     
-    func loadSettings() {
+    func loadSettings() -> Settings? {
         let dataStorage = DataStorage()
         
+        var settings: Settings? = nil
+        
         do {
-            let settings = try dataStorage.loadSettings()
+            settings = try dataStorage.loadSettings()
         } catch {
             // There were no settings found, create new ones for the user
 //            let gameSettings = GameSettings()
+            print("There were no settings to load.")
+            return nil
         }
+        return settings
     }
     
 }
