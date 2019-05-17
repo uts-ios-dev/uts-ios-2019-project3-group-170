@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWT-HE-6vu">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -72,7 +72,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0MU-nL-4ZR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Jobs" id="DhL-JT-IFw"/>
+                    <tabBarItem key="tabBarItem" title="Jobs" image="briefcase" id="DhL-JT-IFw">
+                        <inset key="imageInsets" minX="25" minY="25" maxX="25" maxY="25"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Swt-8u-GVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -88,11 +90,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gkv-y9-yO5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="vTn-qh-B2j"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="settings-interface-silhouette" id="vTn-qh-B2j">
+                        <inset key="imageInsets" minX="25" minY="25" maxX="25" maxY="25"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoI-Kb-nFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2700" y="463"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="briefcase" width="128" height="128"/>
+        <image name="settings-interface-silhouette" width="128" height="128"/>
+    </resources>
 </document>
