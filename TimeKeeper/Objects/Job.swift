@@ -9,7 +9,7 @@
 import Foundation
 
 struct Job: Codable {
-    var ID: Int8
+    var id: Int8
     var name: String
     var timeEntries: [TimeEntry]
     

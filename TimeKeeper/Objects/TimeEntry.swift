@@ -9,7 +9,7 @@
 import Foundation
 
 struct TimeEntry: Codable {
-    var ID: Int
+    var id: Int
     var date: String?
     var startTime: String
     var endTime: String
