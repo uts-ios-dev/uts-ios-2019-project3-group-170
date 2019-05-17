@@ -47,20 +47,58 @@
             </objects>
             <point key="canvasLocation" x="1042" y="139"/>
         </scene>
-        <!--Manual Time Entry View Controller-->
+        <!--Manual Time Entry-->
         <scene sceneID="IjF-IQ-uTm">
             <objects>
                 <viewController id="kiv-BM-WhZ" customClass="ManualTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gxa-TU-SXZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HnD-zV-IVA">
+                                <rect key="frame" x="0.0" y="217" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="579768760.30587399">
+                                    <!--2019-05-17 06:52:40 +0000-->
+                                </date>
+                            </datePicker>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YaD-uN-HeC">
+                                <rect key="frame" x="0.0" y="492" width="414" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="579768760.30587399">
+                                    <!--2019-05-17 06:52:40 +0000-->
+                                </date>
+                            </datePicker>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-iJ-Aqf">
+                                <rect key="frame" x="20" y="188" width="98" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Finish time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-uV-axw">
+                                <rect key="frame" x="20" y="463" width="109" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5h 23min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Yi-XaN">
+                                <rect key="frame" x="0.0" y="109" width="414" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Ys8-TL-Nac"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Manual Time Entry" id="MCH-dM-vc5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnK-3u-LeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4432" y="459"/>
+            <point key="canvasLocation" x="4431.884057971015" y="458.70535714285711"/>
         </scene>
         <!--This Week-->
         <scene sceneID="MOl-K6-qQK">
@@ -148,7 +186,7 @@
             </objects>
             <point key="canvasLocation" x="2722" y="459"/>
         </scene>
-        <!--View Controller-->
+        <!--<Business Name>-->
         <scene sceneID="Mo8-kg-eAW">
             <objects>
                 <viewController id="Vk4-7S-QuB" sceneMemberID="viewController">
@@ -168,6 +206,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ddO-cI-FhY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="&lt;Business Name&gt;" id="Gks-SN-h3d"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxh-mI-hVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
