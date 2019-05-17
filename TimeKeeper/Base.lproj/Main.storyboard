@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWT-HE-6vu">
-    <device id="retina6_1" orientation="portrait">
+    <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -60,12 +60,11 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnK-3u-LeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4864" y="-190"/>
+            <point key="canvasLocation" x="4432" y="459"/>
         </scene>
         <!--This Week-->
         <scene sceneID="MOl-K6-qQK">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tzv-CK-lo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="QX8-XK-0nV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3C8-B9-glV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -86,13 +85,13 @@
                     <tabBarItem key="tabBarItem" title="This Week" image="Home Icon Tab" id="hAQ-gk-cjM"/>
                     <navigationItem key="navigationItem" title="This Week" id="vBo-zB-nYF"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tzv-CK-lo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2723" y="-834"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1xO-u9-nVe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BfJ-8W-Q0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="mfu-oL-isS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32a-3c-q59">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -101,6 +100,7 @@
                         <viewLayoutGuide key="safeArea" id="5xL-sl-KBU"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BfJ-8W-Q0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3567" y="-834"/>
         </scene>
@@ -124,7 +124,6 @@
         <!--Jobs-->
         <scene sceneID="bil-Ki-qkd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XXX-Z8-fZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="qAL-8K-qvK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ng8-1Z-K1m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -145,21 +144,32 @@
                     <tabBarItem key="tabBarItem" title="Jobs" image="Jobs Icon Tab" id="o7g-hL-Akz"/>
                     <navigationItem key="navigationItem" title="Jobs" id="VjG-AK-izV"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XXX-Z8-fZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2722" y="459"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Mo8-kg-eAW">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Sxh-mI-hVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Vk4-7S-QuB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohI-TK-eaK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNV-8h-nNI">
+                                <rect key="frame" x="46" y="770" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="kiv-BM-WhZ" kind="show" id="CRR-42-RWx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ddO-cI-FhY"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sxh-mI-hVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3567" y="459"/>
         </scene>
@@ -176,7 +186,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Be1-gn-Oc7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4864" y="459"/>
+            <point key="canvasLocation" x="4432" y="-190"/>
         </scene>
         <!--Item-->
         <scene sceneID="fmp-1t-8NN">
@@ -198,7 +208,6 @@
         <!--Reports-->
         <scene sceneID="YLc-sW-EBe">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="tYK-9P-cks" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="PKm-pU-KXI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4fq-Zc-yWM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -219,13 +228,13 @@
                     <tabBarItem key="tabBarItem" title="Reports" image="Reports Icon Tab" id="a3W-uX-J6c"/>
                     <navigationItem key="navigationItem" title="Reports" id="42E-3M-mPJ"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tYK-9P-cks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2722" y="-190"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="mbl-Xx-V66">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KVs-Z3-cgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="tQ5-u2-gpx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gdE-sT-aJS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -234,6 +243,7 @@
                         <viewLayoutGuide key="safeArea" id="q9O-Eh-Jj5"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KVs-Z3-cgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3567" y="-190"/>
         </scene>
@@ -257,7 +267,6 @@
         <!--Settings-->
         <scene sceneID="XcE-2F-4HZ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7lK-38-eNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="Wwa-kC-W82" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qoN-5M-OZI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -268,6 +277,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="Settings Icon Tab" id="bYz-b5-Zmc"/>
                     <navigationItem key="navigationItem" title="Settings" id="TMi-LJ-fxC"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7lK-38-eNi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2722" y="1102"/>
         </scene>
