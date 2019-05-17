@@ -20,7 +20,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Iws-53-0IG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Reports" id="YYd-2X-Wqn"/>
+                    <tabBarItem key="tabBarItem" title="Reports" image="Test - Report Icon" id="YYd-2X-Wqn">
+                        <inset key="imageInsets" minX="25" minY="25" maxX="25" maxY="25"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVq-3c-cEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -74,7 +76,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0MU-nL-4ZR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Jobs" id="DhL-JT-IFw"/>
+                    <tabBarItem key="tabBarItem" title="Jobs" image="Test - Jobs Icon" id="DhL-JT-IFw">
+                        <inset key="imageInsets" minX="25" minY="25" maxX="25" maxY="25"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Swt-8u-GVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -90,7 +94,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gkv-y9-yO5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="vTn-qh-B2j"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Test - Settings Icon" id="vTn-qh-B2j">
+                        <inset key="imageInsets" minX="25" minY="25" maxX="25" maxY="25"/>
+                    </tabBarItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoI-Kb-nFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -99,5 +105,8 @@
     </scenes>
     <resources>
         <image name="Test - Home Icon" width="128" height="128"/>
+        <image name="Test - Jobs Icon" width="128" height="128"/>
+        <image name="Test - Report Icon" width="128" height="128"/>
+        <image name="Test - Settings Icon" width="128" height="128"/>
     </resources>
 </document>
