@@ -10,33 +10,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Reports-->
         <scene sceneID="NBw-hG-TIb">
             <objects>
-                <viewController id="dcI-ak-Zan" sceneMemberID="viewController">
+                <viewController id="dcI-ak-Zan" customClass="ReportsViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jin-tG-RzP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Iws-53-0IG"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="YYd-2X-Wqn"/>
+                    <tabBarItem key="tabBarItem" title="Reports" id="YYd-2X-Wqn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cVq-3c-cEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1962" y="463"/>
+            <point key="canvasLocation" x="2699" y="-185"/>
         </scene>
-        <!--Item 1-->
+        <!--This Week-->
         <scene sceneID="04L-wg-LxS">
             <objects>
-                <viewController id="pGO-IT-iTF" sceneMemberID="viewController">
+                <viewController id="pGO-IT-iTF" customClass="ThisWeekViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8gx-hv-Gn8">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="r2H-Xu-dhk"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Wgw-vv-Er8"/>
+                    <tabBarItem key="tabBarItem" title="This Week" id="Wgw-vv-Er8"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ekk-up-ER0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -62,33 +62,33 @@
             </objects>
             <point key="canvasLocation" x="1042" y="139"/>
         </scene>
-        <!--Item 1-->
+        <!--Jobs-->
         <scene sceneID="2kE-Pd-2lG">
             <objects>
-                <viewController id="8d8-gl-BPF" sceneMemberID="viewController">
+                <viewController id="8d8-gl-BPF" customClass="JobsViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tTZ-ox-POa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0MU-nL-4ZR"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="DhL-JT-IFw"/>
+                    <tabBarItem key="tabBarItem" title="Jobs" id="DhL-JT-IFw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Swt-8u-GVI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2701" y="-185"/>
+            <point key="canvasLocation" x="1961" y="463"/>
         </scene>
-        <!--Item 2-->
+        <!--Settings-->
         <scene sceneID="7qG-52-CnD">
             <objects>
-                <viewController id="MGe-Ty-ykS" sceneMemberID="viewController">
+                <viewController id="MGe-Ty-ykS" customClass="SettingsViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P1s-Ck-hbF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="gkv-y9-yO5"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="vTn-qh-B2j"/>
+                    <tabBarItem key="tabBarItem" title="Settings" id="vTn-qh-B2j"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WoI-Kb-nFL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
