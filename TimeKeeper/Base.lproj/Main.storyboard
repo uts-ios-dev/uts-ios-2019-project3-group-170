@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWT-HE-6vu">
-    <device id="retina6_5" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,7 +16,7 @@
                 <navigationController id="2C7-Wl-xw8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="thl-4h-MU3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tzh-dG-ib7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -52,26 +52,18 @@
             <objects>
                 <viewController id="kiv-BM-WhZ" customClass="ManualTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gxa-TU-SXZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="HnD-zV-IVA">
-                                <rect key="frame" x="0.0" y="217" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="579768760.30587399">
-                                    <!--2019-05-17 06:52:40 +0000-->
-                                </date>
-                            </datePicker>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YaD-uN-HeC">
-                                <rect key="frame" x="0.0" y="492" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="490" width="320" height="216"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <date key="date" timeIntervalSinceReferenceDate="579768760.30587399">
                                     <!--2019-05-17 06:52:40 +0000-->
                                 </date>
                             </datePicker>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-iJ-Aqf">
-                                <rect key="frame" x="20" y="188" width="98" height="27"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-iJ-Aqf">
+                                <rect key="frame" x="0.0" y="110.5" width="98" height="26"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -83,12 +75,12 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5h 23min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Yi-XaN">
-                                <rect key="frame" x="0.0" y="114.66666666666669" width="414" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5h 23min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Yi-XaN">
+                                <rect key="frame" x="0.0" y="64" width="320" height="46.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="e25-Yi-XaN" secondAttribute="height" multiplier="69:10" id="xQh-WQ-BtW"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -99,13 +91,27 @@
                                     <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FSq-EB-9XP">
+                                <rect key="frame" x="0.0" y="137" width="226" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="579768760.30587399">
+                                    <!--2019-05-17 06:52:40 +0000-->
+                                </date>
+                            </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="vTy-iJ-Aqf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="e25-Yi-XaN" secondAttribute="bottom" id="1x9-yi-CRz"/>
                             <constraint firstItem="e25-Yi-XaN" firstAttribute="centerY" secondItem="Gxa-TU-SXZ" secondAttribute="centerY" priority="750" constant="-303.5" id="2C4-jw-VH1"/>
+                            <constraint firstItem="vTy-iJ-Aqf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ys8-TL-Nac" secondAttribute="leading" id="6p7-GF-YGW"/>
+                            <constraint firstItem="vTy-iJ-Aqf" firstAttribute="centerX" secondItem="Gxa-TU-SXZ" secondAttribute="centerX" priority="750" constant="-138" id="8AT-BK-JQF"/>
+                            <constraint firstItem="vTy-iJ-Aqf" firstAttribute="centerY" secondItem="Gxa-TU-SXZ" secondAttribute="centerY" priority="750" constant="-246.5" id="SWY-QY-as6"/>
                             <constraint firstItem="e25-Yi-XaN" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ys8-TL-Nac" secondAttribute="top" id="U2d-n7-6rl"/>
                             <constraint firstItem="e25-Yi-XaN" firstAttribute="trailing" secondItem="Ys8-TL-Nac" secondAttribute="trailing" id="UQ8-Lt-YQN"/>
                             <constraint firstItem="e25-Yi-XaN" firstAttribute="centerX" secondItem="Gxa-TU-SXZ" secondAttribute="centerX" id="Z7j-Ee-I04"/>
+                            <constraint firstItem="FSq-EB-9XP" firstAttribute="top" secondItem="vTy-iJ-Aqf" secondAttribute="bottom" id="aqH-X9-qBA"/>
+                            <constraint firstItem="FSq-EB-9XP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ys8-TL-Nac" secondAttribute="leading" id="d0H-dV-Smk"/>
+                            <constraint firstItem="FSq-EB-9XP" firstAttribute="centerX" secondItem="Gxa-TU-SXZ" secondAttribute="centerX" id="fUP-8K-Sgy"/>
+                            <constraint firstItem="FSq-EB-9XP" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ys8-TL-Nac" secondAttribute="trailing" id="tVg-bj-zUO"/>
                             <constraint firstItem="e25-Yi-XaN" firstAttribute="leading" secondItem="Ys8-TL-Nac" secondAttribute="leading" id="yOx-93-yM3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ys8-TL-Nac"/>
@@ -114,14 +120,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnK-3u-LeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4431.884057971015" y="458.70535714285711"/>
+            <point key="canvasLocation" x="4427.536231884058" y="456.02678571428567"/>
         </scene>
         <!--This Week-->
         <scene sceneID="MOl-K6-qQK">
             <objects>
                 <viewController id="QX8-XK-0nV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3C8-B9-glV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTd-zc-UdM">
@@ -148,7 +154,7 @@
             <objects>
                 <viewController id="mfu-oL-isS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32a-3c-q59">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5xL-sl-KBU"/>
@@ -164,7 +170,7 @@
                 <navigationController id="v1c-0g-jUb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="tok-Et-4Y1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHE-Eh-aQJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -180,7 +186,7 @@
             <objects>
                 <viewController id="qAL-8K-qvK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ng8-1Z-K1m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKy-2M-Gxw">
@@ -207,7 +213,7 @@
             <objects>
                 <viewController id="Vk4-7S-QuB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohI-TK-eaK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNV-8h-nNI">
@@ -233,7 +239,7 @@
             <objects>
                 <viewController id="mIp-MJ-nLz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3XU-x1-0u7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="34j-7E-cDF"/>
@@ -249,7 +255,7 @@
                 <navigationController id="Tmc-L9-Kws" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="giK-NK-T0j"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nGU-sE-LSA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -265,7 +271,7 @@
             <objects>
                 <viewController id="PKm-pU-KXI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4fq-Zc-yWM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIg-N4-HCc">
@@ -292,7 +298,7 @@
             <objects>
                 <viewController id="tQ5-u2-gpx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gdE-sT-aJS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="q9O-Eh-Jj5"/>
@@ -308,7 +314,7 @@
                 <navigationController id="JK4-Tf-CAx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="taB-rj-45I"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ih3-dq-ZOf">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -324,7 +330,7 @@
             <objects>
                 <viewController id="Wwa-kC-W82" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qoN-5M-OZI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="No1-Tk-vTr"/>
@@ -341,7 +347,7 @@
         <image name="Home Icon Tab" width="25" height="25"/>
         <image name="Jobs Icon Tab" width="25" height="25"/>
         <image name="Reports Icon Tab" width="25" height="25"/>
-        <image name="Save Button" width="239.66667175292969" height="239.66667175292969"/>
+        <image name="Save Button" width="239.5" height="239.5"/>
         <image name="Settings Icon Tab" width="25" height="25"/>
     </resources>
 </document>
