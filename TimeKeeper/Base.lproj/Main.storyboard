@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWT-HE-6vu">
-    <device id="retina6_5" orientation="portrait">
+    <device id="ipad9_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,7 +16,7 @@
                 <navigationController id="2C7-Wl-xw8" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="thl-4h-MU3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tzh-dG-ib7">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -52,11 +52,11 @@
             <objects>
                 <viewController id="kiv-BM-WhZ" customClass="ManualTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Gxa-TU-SXZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0hN-uV-axw">
-                                <rect key="frame" x="20" y="434.66666666666669" width="119" height="27"/>
+                                <rect key="frame" x="230" y="553" width="119" height="27"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="Isc-0Q-gy4"/>
                                 </constraints>
@@ -75,7 +75,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5h 23min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e25-Yi-XaN">
-                                <rect key="frame" x="0.0" y="103" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="110" width="768" height="111.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="e25-Yi-XaN" secondAttribute="height" multiplier="414:83" id="D0X-NG-gu3"/>
                                     <constraint firstAttribute="width" secondItem="e25-Yi-XaN" secondAttribute="height" multiplier="69:10" id="xQh-WQ-BtW"/>
@@ -101,7 +101,7 @@
                                 </variation>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="YaD-uN-HeC" userLabel="Fininsh Date Picker">
-                                <rect key="frame" x="0.0" y="464" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="590" width="768" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="250" id="4HE-6F-ZFI"/>
                                 </constraints>
@@ -120,7 +120,7 @@
                                 </variation>
                             </datePicker>
                             <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="FSq-EB-9XP" userLabel="Start Date Picker">
-                                <rect key="frame" x="0.0" y="216" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="297" width="768" height="216"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="250" id="ERY-Rf-NC3"/>
                                 </constraints>
@@ -139,7 +139,7 @@
                                 </variation>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eSY-i5-TVA">
-                                <rect key="frame" x="20" y="733" width="60" height="60"/>
+                                <rect key="frame" x="177" y="846" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="eSY-i5-TVA" secondAttribute="height" multiplier="1:1" id="0ed-bZ-Sc8"/>
                                     <constraint firstAttribute="height" constant="60" id="Cwe-n8-v0N"/>
@@ -171,7 +171,7 @@
                                 </variation>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTy-iJ-Aqf">
-                                <rect key="frame" x="20" y="187.66666666666666" width="108" height="27"/>
+                                <rect key="frame" x="230" y="261.5" width="108" height="25.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="27" id="n0B-ju-viF"/>
                                 </constraints>
@@ -280,6 +280,12 @@
                                 <exclude reference="Z42-4x-l91"/>
                                 <exclude reference="Z7j-Ee-I04"/>
                                 <exclude reference="yOx-93-yM3"/>
+                                <exclude reference="0FF-Sj-n5T"/>
+                                <exclude reference="1x9-yi-CRz"/>
+                                <exclude reference="MOF-yF-rtG"/>
+                                <exclude reference="SWY-QY-as6"/>
+                                <exclude reference="aPF-a5-MqU"/>
+                                <exclude reference="dnl-RG-lir"/>
                                 <exclude reference="9Dp-9d-Fth"/>
                                 <exclude reference="AI9-3N-Ngc"/>
                                 <exclude reference="RMK-am-Igy"/>
@@ -288,12 +294,14 @@
                                 <exclude reference="t5z-0s-QMf"/>
                                 <exclude reference="tG9-kk-Ykc"/>
                                 <exclude reference="yx5-Rv-ZVa"/>
-                                <exclude reference="0FF-Sj-n5T"/>
-                                <exclude reference="1x9-yi-CRz"/>
-                                <exclude reference="MOF-yF-rtG"/>
-                                <exclude reference="SWY-QY-as6"/>
-                                <exclude reference="aPF-a5-MqU"/>
-                                <exclude reference="dnl-RG-lir"/>
+                                <exclude reference="3eK-zb-04t"/>
+                                <exclude reference="Sg7-aT-Jag"/>
+                                <exclude reference="Y7f-Ol-UNR"/>
+                                <exclude reference="Ynd-XK-Jt8"/>
+                                <exclude reference="ZKN-bU-OMr"/>
+                                <exclude reference="ZN7-ma-RZY"/>
+                                <exclude reference="Zzw-yH-lBq"/>
+                                <exclude reference="uLZ-SM-4ej"/>
                                 <exclude reference="65R-MD-9le"/>
                                 <exclude reference="KXD-OE-me0"/>
                                 <exclude reference="Kai-XK-fJL"/>
@@ -303,14 +311,6 @@
                                 <exclude reference="kch-JN-Cuz"/>
                                 <exclude reference="nAD-oH-Cu4"/>
                                 <exclude reference="tIQ-gJ-VTf"/>
-                                <exclude reference="3eK-zb-04t"/>
-                                <exclude reference="Sg7-aT-Jag"/>
-                                <exclude reference="Y7f-Ol-UNR"/>
-                                <exclude reference="Ynd-XK-Jt8"/>
-                                <exclude reference="ZKN-bU-OMr"/>
-                                <exclude reference="ZN7-ma-RZY"/>
-                                <exclude reference="Zzw-yH-lBq"/>
-                                <exclude reference="uLZ-SM-4ej"/>
                                 <exclude reference="3lq-e5-Vpp"/>
                                 <exclude reference="icE-F3-xtn"/>
                                 <exclude reference="rad-Os-y2f"/>
@@ -326,22 +326,22 @@
                                 <include reference="UQ8-Lt-YQN"/>
                                 <include reference="Z7j-Ee-I04"/>
                                 <include reference="yOx-93-yM3"/>
+                                <include reference="1x9-yi-CRz"/>
+                                <include reference="SWY-QY-as6"/>
+                                <include reference="aPF-a5-MqU"/>
                                 <include reference="9Dp-9d-Fth"/>
                                 <include reference="AI9-3N-Ngc"/>
                                 <include reference="RMK-am-Igy"/>
                                 <include reference="fUP-8K-Sgy"/>
                                 <include reference="tG9-kk-Ykc"/>
-                                <include reference="1x9-yi-CRz"/>
-                                <include reference="SWY-QY-as6"/>
-                                <include reference="aPF-a5-MqU"/>
+                                <include reference="3eK-zb-04t"/>
+                                <include reference="Sg7-aT-Jag"/>
+                                <include reference="ZN7-ma-RZY"/>
                                 <include reference="Kai-XK-fJL"/>
                                 <include reference="Ygx-DK-bE2"/>
                                 <include reference="kch-JN-Cuz"/>
                                 <include reference="nAD-oH-Cu4"/>
                                 <include reference="tIQ-gJ-VTf"/>
-                                <include reference="3eK-zb-04t"/>
-                                <include reference="Sg7-aT-Jag"/>
-                                <include reference="ZN7-ma-RZY"/>
                                 <include reference="icE-F3-xtn"/>
                                 <include reference="rad-Os-y2f"/>
                             </mask>
@@ -355,21 +355,21 @@
                                 <include reference="AMN-dy-uTC"/>
                                 <include reference="LJg-zp-OBh"/>
                                 <include reference="Z42-4x-l91"/>
-                                <include reference="RQV-gj-Zb1"/>
-                                <include reference="t5z-0s-QMf"/>
-                                <include reference="yx5-Rv-ZVa"/>
                                 <include reference="0FF-Sj-n5T"/>
                                 <exclude reference="MOF-yF-rtG"/>
                                 <include reference="dnl-RG-lir"/>
-                                <include reference="65R-MD-9le"/>
-                                <include reference="KXD-OE-me0"/>
-                                <include reference="MNY-O8-mwd"/>
-                                <include reference="dlu-DB-I7Q"/>
+                                <include reference="RQV-gj-Zb1"/>
+                                <include reference="t5z-0s-QMf"/>
+                                <include reference="yx5-Rv-ZVa"/>
                                 <include reference="Y7f-Ol-UNR"/>
                                 <exclude reference="Ynd-XK-Jt8"/>
                                 <include reference="ZKN-bU-OMr"/>
                                 <exclude reference="Zzw-yH-lBq"/>
                                 <include reference="uLZ-SM-4ej"/>
+                                <include reference="65R-MD-9le"/>
+                                <include reference="KXD-OE-me0"/>
+                                <include reference="MNY-O8-mwd"/>
+                                <include reference="dlu-DB-I7Q"/>
                                 <exclude reference="3lq-e5-Vpp"/>
                                 <include reference="sFo-oH-E1Q"/>
                                 <include reference="wQl-PR-Y9t"/>
@@ -387,11 +387,69 @@
             <objects>
                 <viewController id="QX8-XK-0nV" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3C8-B9-glV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="82W-c8-Ent">
+                                <rect key="frame" x="20" y="730" width="60" height="60"/>
+                                <state key="normal" title="Button" image="Timer"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="USd-nH-ydU">
+                                <rect key="frame" x="20" y="336" width="374" height="377"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RMe-Xy-4Jb">
+                                <rect key="frame" x="20" y="88" width="374" height="234"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good morning James." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPi-tF-zbk">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="20.5"/>
+                                        <color key="backgroundColor" red="0.87926162720000001" green="1" blue="0.98422737439999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="rNq-P1-dDG"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="rNq-P1-dDG"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="rNq-P1-dDG"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="euc-5l-59E">
+                                        <rect key="frame" x="0.0" y="20.5" width="374" height="193"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="You have logged 120 hours so far this week." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3v-We-dqa">
+                                        <rect key="frame" x="0.0" y="213.5" width="374" height="20.5"/>
+                                        <color key="backgroundColor" red="0.87926162721808021" green="1" blue="0.98422737440662889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="b1l-E3-YVo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="b1l-E3-YVo"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact">
+                                            <mask key="constraints">
+                                                <include reference="b1l-E3-YVo"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mTd-zc-UdM">
-                                <rect key="frame" x="184" y="284" width="46" height="30"/>
+                                <rect key="frame" x="184" y="745" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
@@ -400,21 +458,62 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RMe-Xy-4Jb" firstAttribute="top" secondItem="dhd-rJ-ski" secondAttribute="top" id="6Cj-9w-e6e"/>
+                            <constraint firstItem="RMe-Xy-4Jb" firstAttribute="leading" secondItem="dhd-rJ-ski" secondAttribute="leading" constant="20" id="7MC-MT-DdJ"/>
+                            <constraint firstItem="dhd-rJ-ski" firstAttribute="trailing" secondItem="USd-nH-ydU" secondAttribute="trailing" constant="20" id="9jZ-DR-eKA"/>
+                            <constraint firstItem="82W-c8-Ent" firstAttribute="top" relation="greaterThanOrEqual" secondItem="USd-nH-ydU" secondAttribute="bottom" constant="17" id="I72-6U-yUr">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="RMe-Xy-4Jb" firstAttribute="centerX" secondItem="3C8-B9-glV" secondAttribute="centerX" id="Ra1-O4-zMq"/>
+                            <constraint firstItem="RMe-Xy-4Jb" firstAttribute="centerY" secondItem="3C8-B9-glV" secondAttribute="centerY" priority="750" constant="-238.5" id="cZJ-lA-mn2"/>
+                            <constraint firstItem="USd-nH-ydU" firstAttribute="top" secondItem="RMe-Xy-4Jb" secondAttribute="bottom" constant="5" id="f3m-B5-IUT">
+                                <variation key="heightClass=regular-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="dhd-rJ-ski" firstAttribute="trailing" secondItem="RMe-Xy-4Jb" secondAttribute="trailing" constant="20" id="mLv-6l-186"/>
+                            <constraint firstItem="USd-nH-ydU" firstAttribute="leading" secondItem="dhd-rJ-ski" secondAttribute="leading" constant="20" id="yOr-K8-OK4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="dhd-rJ-ski"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="9jZ-DR-eKA"/>
+                                <exclude reference="mLv-6l-186"/>
+                                <exclude reference="6Cj-9w-e6e"/>
+                                <exclude reference="7MC-MT-DdJ"/>
+                                <exclude reference="Ra1-O4-zMq"/>
+                                <exclude reference="cZJ-lA-mn2"/>
+                                <exclude reference="f3m-B5-IUT"/>
+                                <exclude reference="yOr-K8-OK4"/>
+                                <exclude reference="I72-6U-yUr"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="9jZ-DR-eKA"/>
+                                <include reference="mLv-6l-186"/>
+                                <include reference="6Cj-9w-e6e"/>
+                                <include reference="7MC-MT-DdJ"/>
+                                <include reference="Ra1-O4-zMq"/>
+                                <include reference="cZJ-lA-mn2"/>
+                                <include reference="f3m-B5-IUT"/>
+                                <include reference="yOr-K8-OK4"/>
+                                <include reference="I72-6U-yUr"/>
+                            </mask>
+                        </variation>
                     </view>
                     <tabBarItem key="tabBarItem" title="This Week" image="Home Icon Tab" id="hAQ-gk-cjM"/>
                     <navigationItem key="navigationItem" title="This Week" id="vBo-zB-nYF"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzv-CK-lo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2723" y="-834"/>
+            <point key="canvasLocation" x="2721.739130434783" y="-834.375"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1xO-u9-nVe">
             <objects>
                 <viewController id="mfu-oL-isS" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32a-3c-q59">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5xL-sl-KBU"/>
@@ -430,7 +529,7 @@
                 <navigationController id="v1c-0g-jUb" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="tok-Et-4Y1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHE-Eh-aQJ">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -446,7 +545,7 @@
             <objects>
                 <viewController id="qAL-8K-qvK" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ng8-1Z-K1m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKy-2M-Gxw">
@@ -473,7 +572,7 @@
             <objects>
                 <viewController id="Vk4-7S-QuB" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohI-TK-eaK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VNV-8h-nNI">
@@ -507,7 +606,7 @@
             <objects>
                 <viewController id="mIp-MJ-nLz" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3XU-x1-0u7">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="34j-7E-cDF"/>
@@ -523,7 +622,7 @@
                 <navigationController id="Tmc-L9-Kws" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="giK-NK-T0j"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nGU-sE-LSA">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -539,7 +638,7 @@
             <objects>
                 <viewController id="PKm-pU-KXI" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4fq-Zc-yWM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hIg-N4-HCc">
@@ -566,7 +665,7 @@
             <objects>
                 <viewController id="tQ5-u2-gpx" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gdE-sT-aJS">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="q9O-Eh-Jj5"/>
@@ -582,7 +681,7 @@
                 <navigationController id="JK4-Tf-CAx" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="taB-rj-45I"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ih3-dq-ZOf">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="768" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -598,7 +697,7 @@
             <objects>
                 <viewController id="Wwa-kC-W82" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qoN-5M-OZI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="No1-Tk-vTr"/>
@@ -615,11 +714,11 @@
             <objects>
                 <viewController id="AKg-Ap-gBq" customClass="ManualTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JkR-ul-he3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5h 23min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LRT-Yq-NJw">
-                                <rect key="frame" x="0.0" y="103" width="414" height="83"/>
+                                <rect key="frame" x="0.0" y="110" width="768" height="111.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="LRT-Yq-NJw" secondAttribute="height" multiplier="414:83" id="PwX-lD-bkt"/>
                                     <constraint firstAttribute="width" secondItem="LRT-Yq-NJw" secondAttribute="height" multiplier="69:10" id="S4C-PZ-m0L"/>
@@ -644,8 +743,8 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wia-68-59L" userLabel="Finish Date Picker">
-                                <rect key="frame" x="0.0" y="464" width="414" height="216"/>
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Wia-68-59L" userLabel="Finish Date Picker">
+                                <rect key="frame" x="0.0" y="760" width="768" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="250" id="Cwl-Qq-TGI"/>
                                 </constraints>
@@ -663,8 +762,8 @@
                                     </mask>
                                 </variation>
                             </datePicker>
-                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yoq-im-dWz" userLabel="Start Date Picker">
-                                <rect key="frame" x="0.0" y="216" width="414" height="216"/>
+                            <datePicker contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yoq-im-dWz" userLabel="Start Date Picker">
+                                <rect key="frame" x="0.0" y="433.5" width="768" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="250" id="9m2-Xf-leY"/>
                                 </constraints>
@@ -683,7 +782,7 @@
                                 </variation>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D95-a7-G9W">
-                                <rect key="frame" x="20" y="733" width="60" height="60"/>
+                                <rect key="frame" x="177" y="846" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="EPx-1F-QIM"/>
                                     <constraint firstAttribute="width" secondItem="D95-a7-G9W" secondAttribute="height" multiplier="1:1" id="LNz-D5-Ftp"/>
@@ -695,10 +794,10 @@
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="LNz-D5-Ftp"/>
-                                        <exclude reference="Wv1-TG-RxX"/>
-                                        <exclude reference="VxT-ry-uzU"/>
                                         <exclude reference="EPx-1F-QIM"/>
+                                        <exclude reference="LNz-D5-Ftp"/>
+                                        <exclude reference="VxT-ry-uzU"/>
+                                        <exclude reference="Wv1-TG-RxX"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -709,22 +808,22 @@
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="VxT-ry-uzU"/>
                                         <include reference="EPx-1F-QIM"/>
+                                        <include reference="VxT-ry-uzU"/>
                                     </mask>
                                 </variation>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qze-ac-oLN" userLabel="Start Time Stack View">
-                                <rect key="frame" x="20" y="187.66666666666666" width="296" height="27"/>
+                                <rect key="frame" x="236" y="261.5" width="296" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start time:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nZI-My-BJB">
-                                        <rect key="frame" x="0.0" y="0.0" width="108" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="108" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Time 6:52AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sSy-Fy-7uM">
-                                        <rect key="frame" x="118" y="0.0" width="178" height="27"/>
+                                        <rect key="frame" x="118" y="0.0" width="178" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.71507953861034101" blue="0.18960952680747756" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -747,17 +846,17 @@
                                     </mask>
                                 </variation>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bf2-Zp-R1O" userLabel="Finish Time Stack View">
-                                <rect key="frame" x="20" y="434.66666666666669" width="306" height="27"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Bf2-Zp-R1O" userLabel="Finish Time Stack View">
+                                <rect key="frame" x="231" y="723.5" width="306" height="20.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Finish time:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d6C-wN-rGX">
-                                        <rect key="frame" x="0.0" y="0.0" width="118.66666666666667" height="27"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="118.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Original Time 4:52PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z08-ON-zRh">
-                                        <rect key="frame" x="128.66666666666663" y="0.0" width="177.33333333333337" height="27"/>
+                                        <rect key="frame" x="128.5" y="0.0" width="177.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                         <color key="textColor" red="1" green="0.71507953859999995" blue="0.18960952680000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -912,6 +1011,13 @@
                                 <exclude reference="ZGT-KB-OPA"/>
                                 <exclude reference="uP1-2G-9Sy"/>
                                 <exclude reference="yrN-ji-jbA"/>
+                                <exclude reference="3sS-H4-Tm7"/>
+                                <exclude reference="IVC-8a-7Hf"/>
+                                <exclude reference="K8m-WI-nrC"/>
+                                <exclude reference="NiE-Xh-Dkv"/>
+                                <exclude reference="WWZ-PX-OuY"/>
+                                <exclude reference="Xoj-zV-esE"/>
+                                <exclude reference="dAv-dG-kWY"/>
                                 <exclude reference="Gc6-YF-xW0"/>
                                 <exclude reference="Qo5-6v-avV"/>
                                 <exclude reference="WRR-WX-FeH"/>
@@ -921,13 +1027,14 @@
                                 <exclude reference="jZp-9V-7lz"/>
                                 <exclude reference="niZ-99-zqa"/>
                                 <exclude reference="qwB-En-Kdt"/>
-                                <exclude reference="3sS-H4-Tm7"/>
-                                <exclude reference="IVC-8a-7Hf"/>
-                                <exclude reference="K8m-WI-nrC"/>
-                                <exclude reference="NiE-Xh-Dkv"/>
-                                <exclude reference="WWZ-PX-OuY"/>
-                                <exclude reference="Xoj-zV-esE"/>
-                                <exclude reference="dAv-dG-kWY"/>
+                                <exclude reference="7ty-BA-nhT"/>
+                                <exclude reference="7vD-NJ-eWl"/>
+                                <exclude reference="VxQ-nl-DzJ"/>
+                                <exclude reference="aTb-FD-uqg"/>
+                                <exclude reference="h05-nZ-ylR"/>
+                                <exclude reference="iqC-sw-S9E"/>
+                                <exclude reference="kCL-fi-nGQ"/>
+                                <exclude reference="woA-IW-t3a"/>
                                 <exclude reference="MKs-9A-RQA"/>
                                 <exclude reference="SeB-aE-ePy"/>
                                 <exclude reference="o91-wn-Lo9"/>
@@ -937,14 +1044,6 @@
                                 <exclude reference="uq5-jz-ux7"/>
                                 <exclude reference="vw9-St-NdY"/>
                                 <exclude reference="zyv-HJ-14E"/>
-                                <exclude reference="7ty-BA-nhT"/>
-                                <exclude reference="7vD-NJ-eWl"/>
-                                <exclude reference="VxQ-nl-DzJ"/>
-                                <exclude reference="aTb-FD-uqg"/>
-                                <exclude reference="h05-nZ-ylR"/>
-                                <exclude reference="iqC-sw-S9E"/>
-                                <exclude reference="kCL-fi-nGQ"/>
-                                <exclude reference="woA-IW-t3a"/>
                                 <exclude reference="4V2-IZ-YwN"/>
                                 <exclude reference="4ac-lr-LDt"/>
                                 <exclude reference="6hD-YP-5e8"/>
@@ -962,24 +1061,24 @@
                                 <include reference="YaO-3h-4g7"/>
                                 <include reference="uP1-2G-9Sy"/>
                                 <include reference="yrN-ji-jbA"/>
+                                <include reference="3sS-H4-Tm7"/>
+                                <include reference="IVC-8a-7Hf"/>
+                                <include reference="K8m-WI-nrC"/>
+                                <include reference="dAv-dG-kWY"/>
                                 <include reference="Gc6-YF-xW0"/>
                                 <include reference="auS-Ao-kJG"/>
                                 <include reference="dfV-4r-Fje"/>
                                 <include reference="niZ-99-zqa"/>
                                 <include reference="qwB-En-Kdt"/>
-                                <include reference="3sS-H4-Tm7"/>
-                                <include reference="IVC-8a-7Hf"/>
-                                <include reference="K8m-WI-nrC"/>
-                                <include reference="dAv-dG-kWY"/>
+                                <include reference="7ty-BA-nhT"/>
+                                <include reference="7vD-NJ-eWl"/>
+                                <include reference="iqC-sw-S9E"/>
+                                <include reference="kCL-fi-nGQ"/>
                                 <include reference="MKs-9A-RQA"/>
                                 <include reference="plQ-FU-Rya"/>
                                 <include reference="t1m-vS-Z3s"/>
                                 <include reference="uq5-jz-ux7"/>
                                 <include reference="vw9-St-NdY"/>
-                                <include reference="7ty-BA-nhT"/>
-                                <include reference="7vD-NJ-eWl"/>
-                                <include reference="iqC-sw-S9E"/>
-                                <include reference="kCL-fi-nGQ"/>
                                 <include reference="4ac-lr-LDt"/>
                                 <include reference="n9P-ur-Q4L"/>
                             </mask>
@@ -994,21 +1093,21 @@
                                 <include reference="Llg-Gt-1J0"/>
                                 <include reference="Q1r-Ex-Nth"/>
                                 <include reference="ZGT-KB-OPA"/>
+                                <include reference="NiE-Xh-Dkv"/>
+                                <include reference="WWZ-PX-OuY"/>
+                                <exclude reference="Xoj-zV-esE"/>
                                 <include reference="Qo5-6v-avV"/>
                                 <include reference="WRR-WX-FeH"/>
                                 <exclude reference="bv0-OF-b9I"/>
                                 <include reference="jZp-9V-7lz"/>
-                                <include reference="NiE-Xh-Dkv"/>
-                                <include reference="WWZ-PX-OuY"/>
-                                <exclude reference="Xoj-zV-esE"/>
-                                <include reference="SeB-aE-ePy"/>
-                                <include reference="o91-wn-Lo9"/>
-                                <include reference="p8a-Yn-QtD"/>
-                                <include reference="zyv-HJ-14E"/>
                                 <exclude reference="VxQ-nl-DzJ"/>
                                 <include reference="aTb-FD-uqg"/>
                                 <include reference="h05-nZ-ylR"/>
                                 <include reference="woA-IW-t3a"/>
+                                <include reference="SeB-aE-ePy"/>
+                                <include reference="o91-wn-Lo9"/>
+                                <include reference="p8a-Yn-QtD"/>
+                                <include reference="zyv-HJ-14E"/>
                                 <exclude reference="4V2-IZ-YwN"/>
                                 <include reference="6hD-YP-5e8"/>
                                 <include reference="yzG-w9-bbW"/>
@@ -1026,7 +1125,8 @@
         <image name="Home Icon Tab" width="25" height="25"/>
         <image name="Jobs Icon Tab" width="25" height="25"/>
         <image name="Reports Icon Tab" width="25" height="25"/>
-        <image name="Save Button" width="239.66667175292969" height="239.66667175292969"/>
+        <image name="Save Button" width="239.5" height="239.5"/>
         <image name="Settings Icon Tab" width="25" height="25"/>
+        <image name="Timer" width="239.5" height="239.5"/>
     </resources>
 </document>
