@@ -15,8 +15,6 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //var settings: Settings = loadSettings()
-    
     func loadSettings() -> Settings? {
         let dataStorage = DataStorage()
         
