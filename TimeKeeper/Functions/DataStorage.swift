@@ -44,13 +44,13 @@ struct DataStorage: Codable {
         }
     }
     
-    func saveData(settings: Settings) throws {
+    func saveSettings(settings: Settings) throws {
         let data = try JSONEncoder().encode(settings)
         try write(data, to: settingsLocation)
     }
     
-    func saveData(scores: [Job]) throws {
-        let data = try JSONEncoder().encode(scores)
+    func saveJobs(jobs: [Job]) throws {
+        let data = try JSONEncoder().encode(jobs)
         try write(data, to: jobsLocation)
     }
     
