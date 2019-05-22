@@ -719,7 +719,7 @@
         <!--Start Your Shift-->
         <scene sceneID="CsH-AA-IWm">
             <objects>
-                <viewController id="ybH-gS-aWS" sceneMemberID="viewController">
+                <viewController id="ybH-gS-aWS" customClass="NewTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xme-Jh-XbS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -940,7 +940,7 @@
         <!--<Business Name>-->
         <scene sceneID="Mo8-kg-eAW">
             <objects>
-                <viewController id="Vk4-7S-QuB" sceneMemberID="viewController">
+                <viewController id="Vk4-7S-QuB" customClass="JobViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohI-TK-eaK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1050,7 +1050,7 @@
         <!--Settings-->
         <scene sceneID="0xa-2a-7BP">
             <objects>
-                <tableViewController id="R34-GS-kfd" sceneMemberID="viewController">
+                <tableViewController id="R34-GS-kfd" customClass="SettingsViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="I5X-Hh-lN2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1297,7 +1297,7 @@
         <!--<Business Name>-->
         <scene sceneID="G0S-CP-1ID">
             <objects>
-                <viewController id="AKg-Ap-gBq" customClass="ManualTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="AKg-Ap-gBq" customClass="EditTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JkR-ul-he3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
