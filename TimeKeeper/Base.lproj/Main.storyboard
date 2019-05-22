@@ -742,7 +742,7 @@
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock in." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C72-Wc-PIm">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Clock in." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C72-Wc-PIm">
                                 <rect key="frame" x="182.66666666666666" y="739" width="49" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="NLC-1l-LRK"/>
@@ -761,7 +761,7 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUj-mO-bMQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUj-mO-bMQ" userLabel="Play Button">
                                 <rect key="frame" x="143" y="599" width="128" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="128" id="3b1-oP-pef"/>
@@ -786,15 +786,42 @@
                                     </mask>
                                 </variation>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqE-wA-DoH" userLabel="Stop Button">
+                                <rect key="frame" x="143" y="599" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="AMW-8n-h4T"/>
+                                    <constraint firstAttribute="height" priority="750" constant="128" id="jAG-CA-wPJ"/>
+                                    <constraint firstAttribute="width" secondItem="uqE-wA-DoH" secondAttribute="height" multiplier="1:1" id="lZf-jy-N7H"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Stop Red"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="jAG-CA-wPJ"/>
+                                        <exclude reference="AMW-8n-h4T"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="jAG-CA-wPJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="AMW-8n-h4T"/>
+                                    </mask>
+                                </variation>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="GUj-mO-bMQ" firstAttribute="centerY" secondItem="xme-Jh-XbS" secondAttribute="centerY" priority="750" constant="215" id="3oL-z7-R4Z"/>
+                            <constraint firstItem="uqE-wA-DoH" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="7eq-uG-uYi"/>
                             <constraint firstItem="GUj-mO-bMQ" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="8lv-x7-PRS"/>
                             <constraint firstItem="xPc-H6-BOa" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="9RC-lw-2jW"/>
                             <constraint firstItem="C72-Wc-PIm" firstAttribute="top" secondItem="GUj-mO-bMQ" secondAttribute="bottom" constant="12" id="GnN-Et-eBK">
                                 <variation key="heightClass=regular-widthClass=compact" constant="12"/>
                             </constraint>
+                            <constraint firstItem="uqE-wA-DoH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q8B-rc-fIC" secondAttribute="bottom" constant="15" id="HYN-9c-8BY"/>
                             <constraint firstItem="C72-Wc-PIm" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="JEA-Bm-rkx"/>
                             <constraint firstItem="GUj-mO-bMQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q8B-rc-fIC" secondAttribute="bottom" constant="92" id="T2Z-G3-tnY">
                                 <variation key="heightClass=regular-widthClass=compact" constant="15"/>
@@ -806,6 +833,7 @@
                             <constraint firstItem="aM7-W0-e6e" firstAttribute="top" secondItem="xPc-H6-BOa" secondAttribute="bottom" constant="12" id="fEC-jn-7b9"/>
                             <constraint firstItem="xPc-H6-BOa" firstAttribute="centerY" secondItem="xme-Jh-XbS" secondAttribute="centerY" priority="750" constant="-245" id="h9o-5E-TGv"/>
                             <constraint firstItem="q8B-rc-fIC" firstAttribute="centerY" secondItem="xme-Jh-XbS" secondAttribute="centerY" priority="250" constant="47" id="hUA-FJ-qYS"/>
+                            <constraint firstItem="uqE-wA-DoH" firstAttribute="centerY" secondItem="xme-Jh-XbS" secondAttribute="centerY" priority="750" constant="215" id="kYY-YZ-BON"/>
                             <constraint firstItem="aM7-W0-e6e" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="lMV-Bd-fQF"/>
                             <constraint firstItem="kUs-8t-0uC" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="C72-Wc-PIm" secondAttribute="bottom" constant="59" id="n8W-Gt-w8e">
                                 <variation key="heightClass=regular-widthClass=compact" constant="5"/>
@@ -819,17 +847,20 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kUs-8t-0uC"/>
                         <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="GUj-mO-bMQ"/>
+                            </mask>
                             <mask key="constraints">
+                                <exclude reference="T2Z-G3-tnY"/>
                                 <exclude reference="n8W-Gt-w8e"/>
                                 <exclude reference="uoG-o8-0rE"/>
-                                <exclude reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="T2Z-G3-tnY"/>
                                 <include reference="n8W-Gt-w8e"/>
                                 <include reference="uoG-o8-0rE"/>
-                                <include reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                     </view>
@@ -1684,6 +1715,7 @@
         <image name="Play Blue" width="128" height="128"/>
         <image name="Reports Icon Tab" width="25" height="25"/>
         <image name="Save Button" width="239.66667175292969" height="239.66667175292969"/>
+        <image name="Stop Red" width="128" height="128"/>
         <image name="Timer" width="239.66667175292969" height="239.66667175292969"/>
         <image name="pizza" width="128" height="128"/>
     </resources>
