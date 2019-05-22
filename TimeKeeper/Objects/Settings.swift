@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Used to store the users settings to persistant storage
 struct Settings: Codable {
     var usersName: String
     var usersEmail: String?
@@ -15,8 +16,4 @@ struct Settings: Codable {
     var timeFormat: String
     var firstDayOfWeek: String
     
-}
-
-struct DateFormats: Codable {
-    // dunno yet
 }
