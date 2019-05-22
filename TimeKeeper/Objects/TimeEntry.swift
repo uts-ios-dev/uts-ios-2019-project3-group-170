@@ -9,8 +9,13 @@
 import Foundation
 
 struct TimeEntry: Codable {
-    var id: Int
+    var id: Int?
     var date: String?
     var startTime: String
     var endTime: String
+    var breakStartTime: String?
+    var breakEndTime: String?
+    var hasBeenEdited: Bool = false
+    var originalStartTime: String?
+    var originalEndTime: String?
 }
