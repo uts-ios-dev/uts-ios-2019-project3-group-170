@@ -31,4 +31,13 @@ class SettingsViewController: UITableViewController {
         return settings
     }
     
+    func saveSettings(settings: Settings) {
+        let dataStorage = DataStorage()
+        
+        do {
+            dataStorage.saveSettings(settings)
+        } catch {
+            // The save didnt work, please do something here
+        }
+    }
 }

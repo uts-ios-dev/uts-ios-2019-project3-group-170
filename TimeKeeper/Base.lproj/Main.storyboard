@@ -457,7 +457,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFP-tK-Aka">
-                                                    <rect key="frame" x="191" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="285" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -716,10 +716,10 @@
             </objects>
             <point key="canvasLocation" x="2721.739130434783" y="-834.375"/>
         </scene>
-        <!--Start Your Shift-->
+        <!--New Time Entry-->
         <scene sceneID="CsH-AA-IWm">
             <objects>
-                <viewController id="ybH-gS-aWS" customClass="NewTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ybH-gS-aWS" userLabel="New Time Entry" customClass="NewTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xme-Jh-XbS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -796,8 +796,8 @@
                                 <state key="normal" backgroundImage="Stop Red"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="jAG-CA-wPJ"/>
                                         <exclude reference="AMW-8n-h4T"/>
+                                        <exclude reference="jAG-CA-wPJ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -874,16 +874,16 @@
                                 <exclude reference="GUj-mO-bMQ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="T2Z-G3-tnY"/>
                                 <exclude reference="n8W-Gt-w8e"/>
                                 <exclude reference="uoG-o8-0rE"/>
+                                <exclude reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="T2Z-G3-tnY"/>
                                 <include reference="n8W-Gt-w8e"/>
                                 <include reference="uoG-o8-0rE"/>
+                                <include reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                     </view>
