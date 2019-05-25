@@ -35,7 +35,7 @@ class SettingsViewController: UITableViewController {
         let dataStorage = DataStorage()
         
         do {
-            dataStorage.saveSettings(settings)
+            try dataStorage.saveSettings(settings: settings)
         } catch {
             // The save didnt work, please do something here
         }

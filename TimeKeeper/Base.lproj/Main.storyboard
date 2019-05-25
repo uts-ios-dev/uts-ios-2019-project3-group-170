@@ -1368,6 +1368,9 @@
                                         <include reference="Cwl-Qq-TGI"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="endDateTimeChanged:" destination="AKg-Ap-gBq" eventType="editingDidEnd" id="wLH-i3-tRP"/>
+                                </connections>
                             </datePicker>
                             <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Yoq-im-dWz" userLabel="Start Date Picker">
                                 <rect key="frame" x="0.0" y="216" width="414" height="216"/>
@@ -1387,6 +1390,9 @@
                                         <include reference="9m2-Xf-leY"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="startDateTimeChanged:" destination="AKg-Ap-gBq" eventType="valueChanged" id="0r7-o7-8R3"/>
+                                </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D95-a7-G9W">
                                 <rect key="frame" x="20" y="733" width="60" height="60"/>
@@ -1748,6 +1754,13 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Time Entry" id="BmV-ob-MhL"/>
+                    <connections>
+                        <outlet property="endTimeDatePicker" destination="Wia-68-59L" id="q6e-oh-1jG"/>
+                        <outlet property="originalFinishTimeLabel" destination="z08-ON-zRh" id="DHE-OK-8M9"/>
+                        <outlet property="originalStartTimeLabel" destination="sSy-Fy-7uM" id="NIG-W1-Csd"/>
+                        <outlet property="startTimeDatePicker" destination="Yoq-im-dWz" id="cbD-Ep-XU6"/>
+                        <outlet property="timeLabel" destination="LRT-Yq-NJw" id="vyY-dH-NpD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-Mu-V9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
