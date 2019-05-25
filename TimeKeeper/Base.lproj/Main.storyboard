@@ -426,7 +426,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="USd-nH-ydU">
-                                <rect key="frame" x="20" y="336" width="374" height="370"/>
+                                <rect key="frame" x="20" y="402" width="374" height="321"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="524" id="2kl-h8-8JS"/>
@@ -457,7 +457,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFP-tK-Aka">
-                                                    <rect key="frame" x="285" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="435" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -511,7 +511,7 @@
                                 </variation>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RMe-Xy-4Jb">
-                                <rect key="frame" x="20" y="88" width="374" height="243"/>
+                                <rect key="frame" x="20" y="88" width="374" height="309"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Good morning James." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPi-tF-zbk">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="25"/>
@@ -535,11 +535,11 @@
                                         </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="euc-5l-59E">
-                                        <rect key="frame" x="0.0" y="25" width="374" height="193"/>
+                                        <rect key="frame" x="0.0" y="25" width="374" height="259"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have logged 120 hours so far this week." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H3v-We-dqa">
-                                        <rect key="frame" x="0.0" y="218" width="374" height="25"/>
+                                        <rect key="frame" x="0.0" y="284" width="374" height="25"/>
                                         <color key="backgroundColor" red="0.87926162721808021" green="1" blue="0.98422737440662889" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="b1l-E3-YVo"/>
@@ -725,23 +725,85 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:08 pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPc-H6-BOa">
-                                <rect key="frame" x="80.666666666666686" y="161" width="253" height="84"/>
+                                <rect key="frame" x="80.666666666666686" y="161.33333333333334" width="253" height="83.666666666666657"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't clocked in yet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM7-W0-e6e">
-                                <rect key="frame" x="131.66666666666666" y="257" width="150.99999999999997" height="15"/>
+                                <rect key="frame" x="131.66666666666669" y="257" width="150.66666666666669" height="14.333333333333314"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8B-rc-fIC">
-                                <rect key="frame" x="158.66666666666666" y="483" width="97" height="24"/>
+                                <rect key="frame" x="158.66666666666663" y="483" width="96.666666666666657" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End break." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GQ-wU-Vz9">
+                                <rect key="frame" x="177" y="739" width="60.333333333333343" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="ETb-Kg-0EK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="ETb-Kg-0EK"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="ETb-Kg-0EK"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqE-wA-DoH" userLabel="Stop Button">
+                                <rect key="frame" x="143" y="599" width="128" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="AMW-8n-h4T"/>
+                                    <constraint firstAttribute="height" priority="750" constant="128" id="jAG-CA-wPJ"/>
+                                    <constraint firstAttribute="width" secondItem="uqE-wA-DoH" secondAttribute="height" multiplier="1:1" id="lZf-jy-N7H"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Stop Red"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="AMW-8n-h4T"/>
+                                        <exclude reference="jAG-CA-wPJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="jAG-CA-wPJ"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="AMW-8n-h4T"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mt6-IL-Pim" userLabel="Break Stack View">
+                                <rect key="frame" x="183" y="575" width="48" height="12"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hot-cup-of-coffee" translatesAutoresizingMaskIntoConstraints="NO" id="0J2-cH-4fq">
+                                        <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="12" id="U04-3j-0PX"/>
+                                            <constraint firstAttribute="width" constant="12" id="hQF-pD-HET"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Break." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dHF-TS-zaa">
+                                        <rect key="frame" x="12" y="0.0" width="36" height="12"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock in." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C72-Wc-PIm">
                                 <rect key="frame" x="182.66666666666666" y="739" width="49" height="15"/>
                                 <constraints>
@@ -786,50 +848,6 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uqE-wA-DoH" userLabel="Stop Button">
-                                <rect key="frame" x="143" y="599" width="128" height="128"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="AMW-8n-h4T"/>
-                                    <constraint firstAttribute="height" priority="750" constant="128" id="jAG-CA-wPJ"/>
-                                    <constraint firstAttribute="width" secondItem="uqE-wA-DoH" secondAttribute="height" multiplier="1:1" id="lZf-jy-N7H"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="Stop Red"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="AMW-8n-h4T"/>
-                                        <exclude reference="jAG-CA-wPJ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="jAG-CA-wPJ"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="AMW-8n-h4T"/>
-                                    </mask>
-                                </variation>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End break." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8GQ-wU-Vz9">
-                                <rect key="frame" x="176.66666666666666" y="739" width="61" height="15"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="15" id="ETb-Kg-0EK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="ETb-Kg-0EK"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="ETb-Kg-0EK"/>
-                                    </mask>
-                                </variation>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -838,15 +856,18 @@
                             <constraint firstItem="uqE-wA-DoH" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="7eq-uG-uYi"/>
                             <constraint firstItem="GUj-mO-bMQ" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="8lv-x7-PRS"/>
                             <constraint firstItem="xPc-H6-BOa" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="9RC-lw-2jW"/>
+                            <constraint firstItem="uqE-wA-DoH" firstAttribute="top" secondItem="mt6-IL-Pim" secondAttribute="bottom" priority="750" constant="12" id="AGj-kS-etq"/>
                             <constraint firstItem="8GQ-wU-Vz9" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="BmU-np-lhg"/>
                             <constraint firstItem="C72-Wc-PIm" firstAttribute="top" secondItem="GUj-mO-bMQ" secondAttribute="bottom" constant="12" id="GnN-Et-eBK">
                                 <variation key="heightClass=regular-widthClass=compact" constant="12"/>
                             </constraint>
                             <constraint firstItem="uqE-wA-DoH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q8B-rc-fIC" secondAttribute="bottom" constant="15" id="HYN-9c-8BY"/>
                             <constraint firstItem="C72-Wc-PIm" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="JEA-Bm-rkx"/>
+                            <constraint firstItem="uqE-wA-DoH" firstAttribute="top" relation="greaterThanOrEqual" secondItem="mt6-IL-Pim" secondAttribute="bottom" id="QkI-p8-ZEq"/>
                             <constraint firstItem="GUj-mO-bMQ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q8B-rc-fIC" secondAttribute="bottom" constant="92" id="T2Z-G3-tnY">
                                 <variation key="heightClass=regular-widthClass=compact" constant="15"/>
                             </constraint>
+                            <constraint firstItem="mt6-IL-Pim" firstAttribute="top" relation="greaterThanOrEqual" secondItem="q8B-rc-fIC" secondAttribute="bottom" constant="10" id="TSI-gJ-OnS"/>
                             <constraint firstItem="q8B-rc-fIC" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="XCf-5U-Vv3"/>
                             <constraint firstItem="8GQ-wU-Vz9" firstAttribute="top" secondItem="uqE-wA-DoH" secondAttribute="bottom" constant="12" id="aEu-N5-mEZ"/>
                             <constraint firstItem="kUs-8t-0uC" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="xPc-H6-BOa" secondAttribute="trailing" constant="20" id="czI-YA-g6M">
@@ -866,6 +887,7 @@
                             <constraint firstItem="xPc-H6-BOa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="kUs-8t-0uC" secondAttribute="top" constant="73" id="uoG-o8-0rE">
                                 <variation key="heightClass=regular-widthClass=compact" constant="10"/>
                             </constraint>
+                            <constraint firstItem="mt6-IL-Pim" firstAttribute="centerX" secondItem="xme-Jh-XbS" secondAttribute="centerX" id="v1J-Hq-0AZ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kUs-8t-0uC"/>
                         <variation key="default">
@@ -874,16 +896,16 @@
                                 <exclude reference="GUj-mO-bMQ"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="T2Z-G3-tnY"/>
                                 <exclude reference="n8W-Gt-w8e"/>
                                 <exclude reference="uoG-o8-0rE"/>
-                                <exclude reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="T2Z-G3-tnY"/>
                                 <include reference="n8W-Gt-w8e"/>
                                 <include reference="uoG-o8-0rE"/>
-                                <include reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                     </view>
@@ -1740,6 +1762,7 @@
         <image name="Save Button" width="239.66667175292969" height="239.66667175292969"/>
         <image name="Stop Red" width="128" height="128"/>
         <image name="Timer" width="239.66667175292969" height="239.66667175292969"/>
+        <image name="hot-cup-of-coffee" width="128" height="128"/>
         <image name="pizza" width="128" height="128"/>
     </resources>
 </document>
