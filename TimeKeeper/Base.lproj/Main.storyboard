@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--This Weeks Navigation Controller-->
         <scene sceneID="3mR-kO-3gE">
             <objects>
-                <navigationController id="2C7-Wl-xw8" sceneMemberID="viewController">
+                <navigationController id="2C7-Wl-xw8" userLabel="This Weeks Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="thl-4h-MU3"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tzh-dG-ib7">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -30,7 +30,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="bFL-js-0PX">
             <objects>
-                <tabBarController id="dWT-HE-6vu" sceneMemberID="viewController">
+                <tabBarController id="dWT-HE-6vu" userLabel="Tab Bar Controller" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uRw-5D-byu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -457,7 +457,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFP-tK-Aka">
-                                                    <rect key="frame" x="191" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="285" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -716,10 +716,10 @@
             </objects>
             <point key="canvasLocation" x="2721.739130434783" y="-834.375"/>
         </scene>
-        <!--Start Your Shift-->
+        <!--New Time Entry-->
         <scene sceneID="CsH-AA-IWm">
             <objects>
-                <viewController id="ybH-gS-aWS" customClass="NewTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="ybH-gS-aWS" userLabel="New Time Entry" customClass="NewTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xme-Jh-XbS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -796,8 +796,8 @@
                                 <state key="normal" backgroundImage="Stop Red"/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="jAG-CA-wPJ"/>
                                         <exclude reference="AMW-8n-h4T"/>
+                                        <exclude reference="jAG-CA-wPJ"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
@@ -874,16 +874,16 @@
                                 <exclude reference="GUj-mO-bMQ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="T2Z-G3-tnY"/>
                                 <exclude reference="n8W-Gt-w8e"/>
                                 <exclude reference="uoG-o8-0rE"/>
+                                <exclude reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="T2Z-G3-tnY"/>
                                 <include reference="n8W-Gt-w8e"/>
                                 <include reference="uoG-o8-0rE"/>
+                                <include reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                     </view>
@@ -893,10 +893,10 @@
             </objects>
             <point key="canvasLocation" x="3566.666666666667" y="-834.375"/>
         </scene>
-        <!--Item-->
+        <!--Reports Navigation Controller-->
         <scene sceneID="X6v-NO-xh5">
             <objects>
-                <navigationController id="v1c-0g-jUb" sceneMemberID="viewController">
+                <navigationController id="v1c-0g-jUb" userLabel="Reports Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="tok-Et-4Y1"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zHE-Eh-aQJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -937,10 +937,10 @@
             </objects>
             <point key="canvasLocation" x="2722" y="459"/>
         </scene>
-        <!--<Business Name>-->
+        <!--Job-->
         <scene sceneID="Mo8-kg-eAW">
             <objects>
-                <viewController id="Vk4-7S-QuB" customClass="JobViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Vk4-7S-QuB" userLabel="Job" customClass="JobViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ohI-TK-eaK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -971,10 +971,10 @@
             </objects>
             <point key="canvasLocation" x="3567" y="459"/>
         </scene>
-        <!--Item-->
+        <!--Reports Navigation Controller-->
         <scene sceneID="fmp-1t-8NN">
             <objects>
-                <navigationController id="Tmc-L9-Kws" sceneMemberID="viewController">
+                <navigationController id="Tmc-L9-Kws" userLabel="Reports Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="giK-NK-T0j"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nGU-sE-LSA">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1030,10 +1030,10 @@
             </objects>
             <point key="canvasLocation" x="3567" y="-190"/>
         </scene>
-        <!--Item-->
+        <!--Settings Navigation Controller-->
         <scene sceneID="lDs-lD-JHE">
             <objects>
-                <navigationController id="JK4-Tf-CAx" sceneMemberID="viewController">
+                <navigationController id="JK4-Tf-CAx" userLabel="Settings Navigation Controller" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="taB-rj-45I"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ih3-dq-ZOf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1294,7 +1294,7 @@
             </objects>
             <point key="canvasLocation" x="2722" y="1102"/>
         </scene>
-        <!--<Business Name>-->
+        <!--Edit Time Entry-->
         <scene sceneID="G0S-CP-1ID">
             <objects>
                 <viewController id="AKg-Ap-gBq" customClass="EditTimeEntryViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
@@ -1725,7 +1725,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="&lt;Business Name&gt;" id="BmV-ob-MhL"/>
+                    <navigationItem key="navigationItem" title="Edit Time Entry" id="BmV-ob-MhL"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-Mu-V9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
