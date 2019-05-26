@@ -57,4 +57,10 @@ struct TimeEntry: Codable {
         
         return nil
     }
+    
+    mutating func SetOriginalTimes() {
+        self.originalStartTime = startTime
+        self.originalEndTime = endTime
+        self.hasBeenEdited = true
+    }
 }
