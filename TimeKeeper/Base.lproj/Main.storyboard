@@ -382,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HnK-3u-LeR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5312" y="139"/>
+            <point key="canvasLocation" x="4442" y="139"/>
         </scene>
         <!--This Week-->
         <scene sceneID="MOl-K6-qQK">
@@ -458,7 +458,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFP-tK-Aka">
-                                                    <rect key="frame" x="435" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="285" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -920,7 +920,7 @@
                                 </variation>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock out." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1m-eT-4vt">
-                                <rect key="frame" x="104.33333333333331" y="739" width="57.666666666666671" height="15"/>
+                                <rect key="frame" x="104.33333333333333" y="739" width="57.666666666666671" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="IJ1-xe-7Y6"/>
                                 </constraints>
@@ -939,7 +939,7 @@
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1h 01m 00s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vot-Re-Jlm" userLabel="Timer">
-                                <rect key="frame" x="107" y="364" width="200.33333333333337" height="48"/>
+                                <rect key="frame" x="107.00000000000001" y="364" width="200.33333333333337" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="10" id="JcF-p9-RSE"/>
                                 </constraints>
@@ -1080,21 +1080,21 @@
                                 <exclude reference="GUj-mO-bMQ"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="T2Z-G3-tnY"/>
                                 <exclude reference="n8W-Gt-w8e"/>
                                 <exclude reference="uoG-o8-0rE"/>
                                 <exclude reference="ZJq-Yl-YbU"/>
+                                <exclude reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
-                                <include reference="T2Z-G3-tnY"/>
                                 <include reference="n8W-Gt-w8e"/>
                                 <include reference="uoG-o8-0rE"/>
                                 <exclude reference="5Xo-Kb-zOs"/>
                                 <include reference="ZJq-Yl-YbU"/>
                                 <exclude reference="XVS-Ln-qXu"/>
                                 <exclude reference="S4n-ac-RDw"/>
+                                <include reference="T2Z-G3-tnY"/>
                             </mask>
                         </variation>
                     </view>
@@ -1154,7 +1154,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2b-Kx-ph5">
-                                                    <rect key="frame" x="435" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="285" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1183,14 +1183,14 @@
                                 <sections/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="StR-7Y-0Ms"/>
                                         <exclude reference="Ofc-Bm-RzC"/>
+                                        <exclude reference="StR-7Y-0Ms"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="StR-7Y-0Ms"/>
                                         <include reference="Ofc-Bm-RzC"/>
+                                        <include reference="StR-7Y-0Ms"/>
                                     </mask>
                                 </variation>
                             </tableView>
@@ -1279,7 +1279,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-ZO-Equ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="524" height="43.666666666666664"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-bu-JEt">
                                                             <rect key="frame" x="0.0" y="0.0" width="148.33333333333334" height="43.666666666666664"/>
@@ -1299,13 +1299,13 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="08h 00 min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04d-Sg-eXD">
-                                                            <rect key="frame" x="153.33333333333337" y="0.0" width="355" height="43.666666666666664"/>
+                                                            <rect key="frame" x="153.33333333333334" y="0.0" width="205.00000000000003" height="43.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEh-PY-zD7">
-                                                            <rect key="frame" x="513.33333333333337" y="0.0" width="10.666666666666629" height="43.666666666666664"/>
+                                                            <rect key="frame" x="363.33333333333331" y="0.0" width="10.666666666666686" height="43.666666666666664"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1492,7 +1492,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSa-14-qLI">
-                                                    <rect key="frame" x="435" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="285" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1521,14 +1521,14 @@
                                 <sections/>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="Reb-79-eXO"/>
                                         <exclude reference="KN4-pA-EXZ"/>
+                                        <exclude reference="Reb-79-eXO"/>
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="Reb-79-eXO"/>
                                         <include reference="KN4-pA-EXZ"/>
+                                        <include reference="Reb-79-eXO"/>
                                     </mask>
                                 </variation>
                             </tableView>
@@ -2429,7 +2429,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-Mu-V9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5311.594202898551" y="808.92857142857144"/>
+            <point key="canvasLocation" x="4442" y="809"/>
         </scene>
     </scenes>
     <resources>
