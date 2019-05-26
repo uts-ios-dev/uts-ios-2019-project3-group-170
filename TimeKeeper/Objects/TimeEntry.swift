@@ -18,11 +18,43 @@ struct TimeEntry: Codable {
     var originalStartTime: Date?
     var originalEndTime: Date?
     
-    func hoursBetweenStartAndFinish() -> Int {
+    func HoursBetweenStartAndFinish() -> Int {
         let calendar = Calendar.current
         
         let timeDifference = calendar.dateComponents([.minute], from: startTime, to: endTime)
         
         return timeDifference.minute! / 60
+    }
+    
+    func MinutesBetweenStartAndFinish() -> Int {
+        let calendar = Calendar.current
+        
+        let timeDifference = calendar.dateComponents([.minute], from: startTime, to: endTime)
+        
+        return timeDifference.minute! % 60
+    }
+    
+    func HoursBetweenBreatStartAndFinish() -> Int? {
+        let calendar = Calendar.current
+        
+        if (breakStartTime != nil) && (breakEndTime != nil) {
+            let timeDifference = calendar.dateComponents([.minute], from: breakStartTime!, to: breakEndTime!)
+            
+            return timeDifference.minute! / 60
+        }
+        
+        return nil
+    }
+    
+    func MinutesBetweenBreatStartAndFinish() -> Int? {
+        let calendar = Calendar.current
+        
+        if (breakStartTime != nil) && (breakEndTime != nil) {
+            let timeDifference = calendar.dateComponents([.minute], from: breakStartTime!, to: breakEndTime!)
+            
+            return timeDifference.minute! % 60
+        }
+        
+        return nil
     }
 }
