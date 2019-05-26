@@ -1403,6 +1403,9 @@
                                         <include reference="VxT-ry-uzU"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="UserPressedSaveButton:" destination="AKg-Ap-gBq" eventType="touchUpInside" id="1Rs-Yl-d8c"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qze-ac-oLN" userLabel="Start Time Stack View">
                                 <rect key="frame" x="20" y="187.66666666666666" width="296" height="27"/>

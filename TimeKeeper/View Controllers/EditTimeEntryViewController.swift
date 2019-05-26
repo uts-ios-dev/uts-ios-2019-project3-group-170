@@ -12,7 +12,8 @@ class EditTimeEntryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // set the time labels to be the time entry we are editing
     }
     
     @IBOutlet weak var timeLabel: UILabel!
@@ -63,4 +64,8 @@ class EditTimeEntryViewController: UIViewController {
         
         timeLabel.text = label
     }
+    
+    @IBAction func UserPressedSaveButton(_ sender: UIButton) {
+    }
+    
 }
