@@ -10,12 +10,19 @@ import Foundation
 
 struct TimeEntry: Codable {
     var id: Int?
-    var date: String?
-    var startTime: String
-    var endTime: String
-    var breakStartTime: String?
-    var breakEndTime: String?
+    var startTime: Date
+    var endTime: Date
+    var breakStartTime: Date?
+    var breakEndTime: Date?
     var hasBeenEdited: Bool = false
-    var originalStartTime: String?
-    var originalEndTime: String?
+    var originalStartTime: Date?
+    var originalEndTime: Date?
+    
+    func hoursBetweenStartAndFinish() -> Int {
+        let calendar = Calendar.current
+        
+        let timeDifference = calendar.dateComponents([.minute], from: startTime, to: endTime)
+        
+        return timeDifference.minute! / 60
+    }
 }
