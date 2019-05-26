@@ -1146,7 +1146,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="cP8-mO-Gqq">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="Pizza" translatesAutoresizingMaskIntoConstraints="NO" id="cP8-mO-Gqq">
                                                     <rect key="frame" x="20" y="4.6666666666666679" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="cP8-mO-Gqq" secondAttribute="height" multiplier="1:1" id="V20-f1-dKm"/>
@@ -1484,7 +1484,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="pizza" translatesAutoresizingMaskIntoConstraints="NO" id="seY-qP-DtE">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" image="Pizza" translatesAutoresizingMaskIntoConstraints="NO" id="seY-qP-DtE">
                                                     <rect key="frame" x="20" y="4.6666666666666679" width="35" height="35"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="35" id="EgI-gc-gNI"/>
@@ -2438,6 +2438,7 @@
     <resources>
         <image name="Home Icon Tab" width="25" height="25"/>
         <image name="Jobs Icon Tab" width="25" height="25"/>
+        <image name="Pizza" width="128" height="128"/>
         <image name="Play Blue" width="128" height="128"/>
         <image name="Play Green" width="128" height="128"/>
         <image name="Plus button" width="279.66665649414062" height="265.66665649414062"/>
