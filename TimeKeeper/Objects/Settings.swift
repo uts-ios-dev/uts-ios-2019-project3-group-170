@@ -10,10 +10,10 @@ import Foundation
 
 // Used to store the users settings to persistant storage
 struct Settings: Codable {
-    var usersName: String
+    var usersName: String?
     var usersEmail: String?
-    var dateFormat: String
-    var timeFormat: String
-    var firstDayOfWeek: String
-    
+    var dateFormat: Int?
+    var timeFormat: Bool
+    var firstDayOfWeek: Int?
+    var notification: Bool
 }

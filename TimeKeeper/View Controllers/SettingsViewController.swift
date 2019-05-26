@@ -10,9 +10,49 @@ import UIKit
 
 class SettingsViewController: UITableViewController {
     
+    @IBOutlet weak var nameTextField : UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var dayFormatSegmentControl: UISegmentedControl!
+    @IBOutlet weak var timeFormatSwitch: UISwitch!
+    @IBOutlet weak var firstDaySegmentControl: UISegmentedControl!
+    @IBOutlet weak var notificationSwtich: UISwitch!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        Settings setting = loadSettings()
+        if(setting != nil){
+            nameTextField.text = setting.usersName!
+            emailTextField.text = setting.usersEmail!
+            dayFormatSegmentControl.selectedSegmentIndex = setting.dateFormat!
+            timeFormatSwitch.setOn(setting.timeFormat, animated: true)
+            firstDaySegmentControl.selectedSegmentIndex = setting.firstDaySegmentControl!
+            notificationSwtich.setOn(setting.notification, animated:true)
+        }
+        else {
+            setting = Settings()
+            let alert = UIAlertController(title: "Input", message: "Please enter your name and email address.", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Enter", style: UIAlertActionStyle.default. handler: {(action: UIAlertAction) in
+                nameTextField.text = alert.nameInputTextField?.text
+                emailTextField.text = alert.emailInputTextField?.text
+                }))
+            alert.addTextFieldWithConfigurationHandler({(nameInputTextField: UITextField!) in
+                nameInputTextField.placeholder = "Enter your name:"
+            })
+            alert.addTextFieldWithConfigurationHandler({(emailInputTextField: UITextField!) in
+                emailInputTextField.placeholder = "Enter your email:"
+            })
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func updateSettings() {
+        Settings setting  = Settings()
+        setting.usersName = nameTextField.text
+        setting.usersEmail = emailTextField.text
+        setting.dateFormat = dayFormatSegmentControl.selectedSegmentIndex
+        setting.timeFormat = timeFormatSwitch.isOn()
+        setting.firstDaySegmentControl = firstDaySegmentControl.selectedSegmentIndex
+        setting.notification = notificationSwtich.isOn();
     }
     
     func loadSettings() -> Settings? {

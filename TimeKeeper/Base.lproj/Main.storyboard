@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWT-HE-6vu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dWT-HE-6vu">
     <device id="retina6_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -1976,6 +1976,14 @@
                     <tabBarItem key="tabBarItem" title="Item" id="V21-8T-qO4"/>
                     <navigationItem key="navigationItem" title="Settings" id="bhE-jX-nY4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dayFormatSegmentControl" destination="ZDh-R4-ODW" id="kZ4-WZ-hcL"/>
+                        <outlet property="emailTextField" destination="ect-AU-s5d" id="mfK-dx-WYb"/>
+                        <outlet property="firstDaySegmentControl" destination="f3U-xx-i0G" id="5Ph-du-kG2"/>
+                        <outlet property="nameTextField" destination="KHq-Ib-TB2" id="dAP-du-zkj"/>
+                        <outlet property="notificationSwtich" destination="gBx-XD-TM0" id="DUn-9C-Qih"/>
+                        <outlet property="timeFormatSwitch" destination="uGk-Hb-Wcd" id="jaj-hS-Pd5"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVI-YZ-9dW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2436,13 +2444,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Home Icon Tab" width="25" height="25"/>
-        <image name="Jobs Icon Tab" width="25" height="25"/>
+        <image name="Home Icon Tab" width="60" height="60"/>
+        <image name="Jobs Icon Tab" width="56.25" height="56.25"/>
         <image name="Pizza" width="128" height="128"/>
         <image name="Play Blue" width="128" height="128"/>
         <image name="Play Green" width="128" height="128"/>
         <image name="Plus button" width="279.66665649414062" height="265.66665649414062"/>
-        <image name="Reports Icon Tab" width="25" height="25"/>
+        <image name="Reports Icon Tab" width="60" height="60"/>
         <image name="Save Button" width="239.66667175292969" height="239.66667175292969"/>
         <image name="Stop Red" width="128" height="128"/>
         <image name="Timer" width="239.66667175292969" height="239.66667175292969"/>
