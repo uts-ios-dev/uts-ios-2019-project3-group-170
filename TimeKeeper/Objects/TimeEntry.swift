@@ -58,6 +58,14 @@ struct TimeEntry: Codable {
         return nil
     }
     
+    func totalAmountOfMinutesWorking() -> Int {
+        let calendar = Calendar.current
+        
+        let timeDifference = calendar.dateComponents([.minute], from: startTime, to: endTime)
+        
+        return timeDifference.minute!
+    }
+    
     mutating func SetOriginalTimes() {
         self.originalStartTime = startTime
         self.originalEndTime = endTime

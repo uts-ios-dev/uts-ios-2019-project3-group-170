@@ -14,4 +14,15 @@ struct Job: Codable {
     var jobSymbol: String
     var timeEntries: [TimeEntry]
     
+    // Loops over the time entry array and adds all the working minutes, then returns the total to the calling function.
+    func totalMinutesWorking() -> Int {
+        var totalTime = 0
+        
+        for timeEntry in timeEntries {
+            totalTime += timeEntry.totalAmountOfMinutesWorking()
+        }
+        
+        return totalTime
+    }
+    
 }
