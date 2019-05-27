@@ -8,11 +8,29 @@
 
 import UIKit
 
-class JobViewController: UIViewController {
+class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // lad the jobs from storage and list them in the table
+    }
+    
+    @IBOutlet weak var jobsTable: UITableView!
+    
+    // Set the number of sections to be 1
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    // Set the number of rows to be the amount of jobs
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    // Format the row cells with the prototype cell class ScoreTableViewCell
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
     }
     
     

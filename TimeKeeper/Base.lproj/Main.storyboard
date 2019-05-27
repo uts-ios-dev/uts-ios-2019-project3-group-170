@@ -1138,7 +1138,7 @@
         <!--Jobs-->
         <scene sceneID="bil-Ki-qkd">
             <objects>
-                <viewController id="qAL-8K-qvK" sceneMemberID="viewController">
+                <viewController id="qAL-8K-qvK" customClass="JobViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ng8-1Z-K1m">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1153,7 +1153,7 @@
                                     <constraint firstAttribute="width" constant="524" id="StR-7Y-0Ms"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vt0-Hi-Djk">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vt0-Hi-Djk" customClass="JobTableViewCell" customModule="TimeKeeper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vt0-Hi-Djk" id="slA-Zd-0QE">
@@ -1167,14 +1167,14 @@
                                                         <constraint firstAttribute="height" constant="35" id="ejb-kq-2II"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2b-Kx-ph5">
-                                                    <rect key="frame" x="285" y="11" width="69" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spq-XP-Ln8">
+                                                    <rect key="frame" x="65" y="11" width="85" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pizza Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="spq-XP-Ln8">
-                                                    <rect key="frame" x="65" y="11" width="85" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2b-Kx-ph5">
+                                                    <rect key="frame" x="285" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1192,6 +1192,11 @@
                                                 <constraint firstAttribute="trailing" secondItem="Y2b-Kx-ph5" secondAttribute="trailing" constant="20" id="zeJ-Iw-NLa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jobHours" destination="Y2b-Kx-ph5" id="HKb-zy-ogN"/>
+                                            <outlet property="jobIcon" destination="cP8-mO-Gqq" id="0vr-G5-KP9"/>
+                                            <outlet property="jobName" destination="spq-XP-Ln8" id="vm5-Bo-opf"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -1252,6 +1257,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Jobs" image="Jobs Icon Tab" id="o7g-hL-Akz"/>
                     <navigationItem key="navigationItem" title="Jobs" id="VjG-AK-izV"/>
+                    <connections>
+                        <outlet property="jobsTable" destination="59a-UZ-Apa" id="uON-Tq-oTY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXX-Z8-fZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
