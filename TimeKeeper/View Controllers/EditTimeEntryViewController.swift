@@ -35,20 +35,19 @@ class EditTimeEntryViewController: UIViewController {
         updateTimeLabel()
     }
     
+    @IBAction func UserPressedSaveButton(_ sender: UIButton) {
+    }
+    
     // Calculate the amount of hours and mintues betweent the start and end times
     func updateTimeLabel() {
-        let dateString1 = startTimeDatePicker.date
-        let dateString2 = endTimeDatePicker.date
-        
         let calendar = Calendar.current
         
-        let timeDifference = calendar.dateComponents([.minute], from: dateString1, to: dateString2)
+        let timeDifference = calendar.dateComponents([.minute], from: startTimeDatePicker.date, to: endTimeDatePicker.date)
         
         let hours = timeDifference.minute! / 60
         let minutes = timeDifference.minute!
         
         formatTimeLabel(hours: hours, minutes: minutes)
-
     }
     
     // Format the amount of hours and minutes into a string
@@ -64,8 +63,4 @@ class EditTimeEntryViewController: UIViewController {
         
         timeLabel.text = label
     }
-    
-    @IBAction func UserPressedSaveButton(_ sender: UIButton) {
-    }
-    
 }
