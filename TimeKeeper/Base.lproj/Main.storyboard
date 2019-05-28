@@ -1123,9 +1123,11 @@
                     </view>
                     <navigationItem key="navigationItem" title="Start Your Shift" id="FyB-qC-8rz"/>
                     <connections>
-                        <outlet property="Stop" destination="eZx-LP-oBq" id="eIz-GH-G60"/>
                         <outlet property="countingLabel" destination="Vot-Re-Jlm" id="kDi-gV-IoD"/>
+                        <outlet property="currentTime" destination="xPc-H6-BOa" id="Pmo-QE-iuv"/>
                         <outlet property="startButton" destination="bcS-iO-OOD" id="FHv-bP-OEf"/>
+                        <outlet property="stopAndPause" destination="eZx-LP-oBq" id="NgF-sW-Rsd"/>
+                        <outletCollection property="efse" destination="Vot-Re-Jlm" id="qRP-7D-AuT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CV0-EQ-qDq" userLabel="First Responder" sceneMemberID="firstResponder"/>

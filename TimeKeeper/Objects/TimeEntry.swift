@@ -17,7 +17,7 @@ struct TimeEntry: Codable {
     var hasBeenEdited: Bool = false
     var originalStartTime: Date?
     var originalEndTime: Date?
-    
+    var hoursOfWork: Double
     // Returns the amount of hours between the start and finish time
     func HoursBetweenStartAndFinish() -> Int {
         let calendar = Calendar.current
