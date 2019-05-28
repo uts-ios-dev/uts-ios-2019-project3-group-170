@@ -401,7 +401,7 @@
         <!--This Week-->
         <scene sceneID="MOl-K6-qQK">
             <objects>
-                <viewController id="QX8-XK-0nV" sceneMemberID="viewController">
+                <viewController id="QX8-XK-0nV" customClass="ThisWeekViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3C8-B9-glV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -725,6 +725,13 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="This Week" image="Home Icon Tab" id="hAQ-gk-cjM"/>
                     <navigationItem key="navigationItem" title="This Week" id="vBo-zB-nYF"/>
+                    <connections>
+                        <outlet property="jobHoursWorking" destination="vFP-tK-Aka" id="90W-F4-eXk"/>
+                        <outlet property="jobIcon" destination="8ga-84-aRZ" id="ZuN-eA-XJ8"/>
+                        <outlet property="jobName" destination="5Hd-VY-biR" id="ZNz-rH-5zs"/>
+                        <outlet property="jobsTableView" destination="USd-nH-ydU" id="6UN-wu-bNE"/>
+                        <outlet property="status" destination="H3v-We-dqa" id="zOP-tX-siX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzv-CK-lo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
