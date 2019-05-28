@@ -12,11 +12,19 @@ class NewTimeEntryViewController: UIViewController {
     
     let dataStorage = DataStorage()
     let date = Date()
+    let calendar = Calendar.current
+    
     var dateComponents = DateComponents()
     var SwiftTimer = Timer()
     var SwiftCounter = 0
     
+    var timeStart: Date!
+    var timeEnd: Date!
+    var timeStartBreak: Date!
+    var timeEndBreak: Date!
+    var hoursWorking: Double = 0.0
     
+    @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet var countingLabel: UILabel!
     @IBOutlet weak var currentTime: UILabel!
     @IBOutlet weak var stopAndPause: UIStackView!
@@ -29,6 +37,7 @@ class NewTimeEntryViewController: UIViewController {
         stopAndPause.isHidden = true
         countingLabel.text = String(SwiftCounter)
         SwiftTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
+
         // Make a popup asking which job they would like to log their time against
     }
     
@@ -37,15 +46,37 @@ class NewTimeEntryViewController: UIViewController {
         SwiftTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         startButton.isHidden = true
         stopAndPause.isHidden = false
+        timeStart = date.self
+    }
+    @IBAction func pauseButton(sender: UIButton) {
+        let image = UIImage(named: "Pause")
+        pauseButton.setImage(image, for: .normal)
+        if let image = UIImage(named: "Pause") {
+            sender.setImage(UIImage(named: "PlayBlue"), for: .normal)
+            SwiftTimer.invalidate()
+            timeStartBreak = date.self
+        }
+        if let image = UIImage(named: "PlayBlue") {
+            sender.setImage(UIImage(named: "Pause"), for: .normal)
+            SwiftTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
+            timeEndBreak = date.self
+        }
         
     }
-    @IBAction func pauseButton(sender: AnyObject) {
-        SwiftTimer.invalidate()
-    }
     @IBAction func stopButton(sender: AnyObject) {
+        hoursWorking = Double(SwiftCounter) / 3600
+        stopAndPause.isHidden = true
+        startButton.isHidden = false
         SwiftTimer.invalidate()
         SwiftCounter = 0
         countingLabel.text = String(SwiftCounter)
+        
+        let entry = TimeEntry(id: nil,startTime: timeStart, endTime: timeEnd, breakStartTime: timeStartBreak, breakEndTime: timeEndBreak, hasBeenEdited: false, originalStartTime: nil, originalEndTime: nil, hoursOfWork: hoursWorking)
+        do {
+            try dataStorage.saveTimeEntry(entry: [entry])
+        } catch {
+            print(error)
+        }
     }
     
     @objc func updateCounter() {
@@ -61,4 +92,5 @@ class NewTimeEntryViewController: UIViewController {
         let minutes: Int = (totalSeconds / 60) % 60
         return String(format: "%01d:%02d", minutes, seconds)
     }
+    
 }

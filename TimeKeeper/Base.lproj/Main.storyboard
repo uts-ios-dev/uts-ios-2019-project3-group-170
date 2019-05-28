@@ -1125,8 +1125,9 @@
                     <connections>
                         <outlet property="countingLabel" destination="Vot-Re-Jlm" id="kDi-gV-IoD"/>
                         <outlet property="currentTime" destination="xPc-H6-BOa" id="Pmo-QE-iuv"/>
+                        <outlet property="pauseButton" destination="7aw-7m-E47" id="l6j-Vo-fbR"/>
                         <outlet property="startButton" destination="bcS-iO-OOD" id="FHv-bP-OEf"/>
-                        <outlet property="stopAndPause" destination="eZx-LP-oBq" id="NgF-sW-Rsd"/>
+                        <outlet property="stopAndPause" destination="eZx-LP-oBq" id="dib-Zx-cnD"/>
                         <outletCollection property="efse" destination="Vot-Re-Jlm" id="qRP-7D-AuT"/>
                     </connections>
                 </viewController>

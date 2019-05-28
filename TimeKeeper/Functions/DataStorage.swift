@@ -12,6 +12,7 @@ import Foundation
 struct DataStorage: Codable {
     let settingsLocation: URL
     let jobsLocation: URL
+    let entryLocation: URL
     
     // Custom enum for data errors
     enum DataError: Error {
@@ -26,6 +27,7 @@ struct DataStorage: Codable {
             .appendingPathExtension("json")
         jobsLocation = persistantStorageDirectory.appendingPathComponent("jobs")
             .appendingPathExtension("json")
+        entryLocation = persistantStorageDirectory.appendingPathComponent("entry").appendingPathExtension("json")
     }
     
     func read(from archive: URL) throws -> Data {
@@ -50,12 +52,7 @@ struct DataStorage: Codable {
         try write(data, to: settingsLocation)
     }
     
-    // Saves the jobs object passed into it to persistant storage
-    func saveJobs(jobs: [Job]) throws {
-        let data = try JSONEncoder().encode(jobs)
-        try write(data, to: jobsLocation)
-    }
-    
+   
     // Loads the settings object from persistant storage, and returns it to the calling method
     func loadSettings() throws -> Settings {
         let data = try read(from: settingsLocation)
@@ -65,11 +62,29 @@ struct DataStorage: Codable {
         throw DataError.dataNotFound
     }
     
+    // Saves the jobs object passed into it to persistant storage
+    func saveJobs(jobs: [Job]) throws {
+        let data = try JSONEncoder().encode(jobs)
+        try write(data, to: jobsLocation)
+    }
     // Loads the jobs object from persistant storage, and returns it to the calling method
     func loadJobs() throws -> [Job] {
         let data = try read(from: jobsLocation)
         if let jobs = try? JSONDecoder().decode([Job].self, from: data) {
             return jobs
+        }
+        throw DataError.dataNotFound
+    }
+    
+    func saveTimeEntry(entry: [TimeEntry]) throws {
+        let data = try JSONEncoder().encode(entry)
+        try write(data, to: entryLocation)
+    }
+    
+    func loadTimeEntry() throws -> [TimeEntry] {
+        let data = try read(from: entryLocation)
+        if let entry = try? JSONDecoder().decode([TimeEntry].self, from: data) {
+            return entry
         }
         throw DataError.dataNotFound
     }
