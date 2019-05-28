@@ -2,8 +2,8 @@
 //  DataStorage.swift
 //  BubblePop
 //
-//  Created by Audwin on 8/5/18.
-//  Copyright © 2018 Audwin. All rights reserved.
+//  Created by by Kieran O'Brien on 17/5/19.
+//  Copyright © 2019 Kieran O'Brien. All rights reserved.
 //
 
 import Foundation
@@ -44,16 +44,19 @@ struct DataStorage: Codable {
         }
     }
     
+    // Saves the settings object passed into it to persistant storage
     func saveSettings(settings: Settings) throws {
         let data = try JSONEncoder().encode(settings)
         try write(data, to: settingsLocation)
     }
     
+    // Saves the jobs object passed into it to persistant storage
     func saveJobs(jobs: [Job]) throws {
         let data = try JSONEncoder().encode(jobs)
         try write(data, to: jobsLocation)
     }
     
+    // Loads the settings object from persistant storage, and returns it to the calling method
     func loadSettings() throws -> Settings {
         let data = try read(from: settingsLocation)
         if let settings = try? JSONDecoder().decode(Settings.self, from: data) {
@@ -62,6 +65,7 @@ struct DataStorage: Codable {
         throw DataError.dataNotFound
     }
     
+    // Loads the jobs object from persistant storage, and returns it to the calling method
     func loadJobs() throws -> [Job] {
         let data = try read(from: jobsLocation)
         if let jobs = try? JSONDecoder().decode([Job].self, from: data) {
