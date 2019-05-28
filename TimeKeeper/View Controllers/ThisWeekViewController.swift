@@ -41,7 +41,7 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
             
             jobHoursWorkingLabel.text = "\(hoursWorking!) h"
             
-            let newEntry = Job(id: nil, name: name, jobSymbol: jobIcon, timeEntries: <#T##[TimeEntry]#>)
+            //let newEntry = Job(id: nil, name: name, jobSymbol: jobIcon, timeEntries: <#T##[TimeEntry]#>)
         }
     }
     
@@ -63,7 +63,7 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         let scoreLabelCell: UILabel = cell.viewWithTag(2) as! UILabel
         
         nameLabelCell.text = "\(indexPath.row + 1). \(jobs[indexPath.row].name)"
-        scoreLabelCell.text = ": \(jobs[indexPath.row].score) points"
+        //scoreLabelCell.text = ": \(jobs[indexPath.row].score) points"
         
         // Alternate the cell background color
         if indexPath.row % 2 == 1 {

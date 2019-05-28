@@ -29,7 +29,7 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     // Format the row cells with the prototype cell class ScoreTableViewCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        return JobTableViewCell()
     }
     
     
