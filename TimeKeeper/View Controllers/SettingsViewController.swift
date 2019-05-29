@@ -17,6 +17,16 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var firstDaySegmentControl: UISegmentedControl!
     @IBOutlet weak var notificationSwtich: UISwitch!
     
+    override func willMove(toParent parent: UIViewController?) {
+        var setting: Settings?
+        setting?.usersName = nameTextField.text
+        setting?.usersEmail = emailTextField.text
+        setting?.dateFormat = dayFormatSegmentControl.selectedSegmentIndex
+        setting?.timeFormat = timeFormatSwitch.isOn
+        setting?.firstDayOfWeek = firstDaySegmentControl.selectedSegmentIndex
+        setting?.notification = notificationSwtich.isOn
+        saveSettings(settings: setting!)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         var setting: Settings? = loadSettings()
@@ -25,35 +35,19 @@ class SettingsViewController: UITableViewController {
             emailTextField.text = setting!.usersEmail!
             dayFormatSegmentControl.selectedSegmentIndex = setting!.dateFormat!
             timeFormatSwitch.setOn(setting!.timeFormat, animated: true)
-            //firstDaySegmentControl.selectedSegmentIndex = setting!.firstDaySegmentControl! // Please make sure this exists!
+            firstDaySegmentControl.selectedSegmentIndex = setting!.firstDayOfWeek!
             notificationSwtich.setOn(setting!.notification, animated:true)
         }
-//        else {
-//            setting = Settings() // Are you trying to create a new Settings object?
-//            let alert = UIAlertController(title: "Input", message: "Please enter your name and email address.", preferredStyle: UIAlertController.Style.alert)
-//            alert.addAction(UIAlertAction(title: "Enter", style: UIAlertActionStyle.default. handler: {(action: UIAlertAction) in
-//                nameTextField.text = alert.nameInputTextField?.text
-//                emailTextField.text = alert.emailInputTextField?.text
-//                }))
-//            alert.addTextFieldWithConfigurationHandler({(nameInputTextField: UITextField!) in
-//                nameInputTextField.placeholder = "Enter your name:"
-//            })
-//            alert.addTextFieldWithConfigurationHandler({(emailInputTextField: UITextField!) in
-//                emailInputTextField.placeholder = "Enter your email:"
-//            })
-//            self.presentViewController(alert, animated: true, completion: nil)
-//        }
+        else {
+            var setting: Settings?
+            setting?.timeFormat = true
+            setting?.notification = true
+            saveSettings(settings: setting!)
+        }
     }
     
-//    func updateSettings() {
-//        Settings setting  = Settings() // Are you trying to create a new Settings object?
-//        setting.usersName = nameTextField.text
-//        setting.usersEmail = emailTextField.text
-//        setting.dateFormat = dayFormatSegmentControl.selectedSegmentIndex
-//        setting.timeFormat = timeFormatSwitch.isOn()
-//        setting.firstDaySegmentControl = firstDaySegmentControl.selectedSegmentIndex
-//        setting.notification = notificationSwtich.isOn();
-//    }
+    
+
     
     func loadSettings() -> Settings? {
         let dataStorage = DataStorage()
