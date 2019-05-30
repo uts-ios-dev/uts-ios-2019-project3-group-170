@@ -12,13 +12,13 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     
     @IBOutlet weak var jobIconImage: UIImageView!
     @IBOutlet weak var jobNameLabel: UILabel!
-    @IBOutlet weak var jobHoursWorkingLabel: UILabel!
-    @IBOutlet weak var statusLabel: UILabel!
     @IBOutlet weak var jobsTableView: UITableView!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var hoursLable: UILabel!
     
-    var jobName: String!
+    var jobName: String?
     var jobIcon: String!
-    var hoursWorking: Double!
+    var entryTime: [TimeEntry]?
     
     let dataStorage: DataStorage = DataStorage()
     var jobs: [Job] = []
@@ -38,10 +38,23 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         
         if let name = jobName {
             jobNameLabel.text = name
+            jobIconImage.image = UIImage(named: jobIcon)
             
-            jobHoursWorkingLabel.text = "\(hoursWorking!) h"
+            let newEntry = Job(id: nil, name: name, jobSymbol: jobIcon, timeEntries: entryTime!)
             
-            //let newEntry = Job(id: nil, name: name, jobSymbol: jobIcon, timeEntries: <#T##[TimeEntry]#>)
+            jobs.append(newEntry)
+            jobsTableView.reloadData()
+            
+            //save Jobs
+            do {
+                try dataStorage.saveJobs(jobs: jobs)
+            } catch {
+                print("Error saving Jobs")
+            }
+        }
+        else {
+            jobNameLabel.text = "nil"
+            jobIconImage.image = UIImage(named: "nil")
         }
     }
     
@@ -56,14 +69,15 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     
     /// Format the row cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NameScoreCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
         
         // Get and display the labels the row cells
         let nameLabelCell: UILabel = cell.viewWithTag(1) as! UILabel
-        let scoreLabelCell: UILabel = cell.viewWithTag(2) as! UILabel
+        let jobIconCell: UIImageView = cell.viewWithTag(2) as! UIImageView
         
         nameLabelCell.text = "\(indexPath.row + 1). \(jobs[indexPath.row].name)"
-        //scoreLabelCell.text = ": \(jobs[indexPath.row].score) points"
+        jobIcon = jobs[indexPath.row].jobSymbol
+        jobIconCell.image = UIImage(named: (jobs[indexPath.row].jobSymbol))
         
         // Alternate the cell background color
         if indexPath.row % 2 == 1 {
@@ -79,8 +93,7 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     
     /// Set the title for table section's header
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Top 10 Ranks"
+        return "Top Jobs"
     }
 
 }
-
