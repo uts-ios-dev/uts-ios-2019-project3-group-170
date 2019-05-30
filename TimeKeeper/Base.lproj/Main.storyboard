@@ -726,9 +726,6 @@
                     <tabBarItem key="tabBarItem" title="This Week" image="Home Icon Tab" id="hAQ-gk-cjM"/>
                     <navigationItem key="navigationItem" title="This Week" id="vBo-zB-nYF"/>
                     <connections>
-                        <outlet property="hoursLable" destination="vFP-tK-Aka" id="KEY-Bk-U1k"/>
-                        <outlet property="jobIconImage" destination="8ga-84-aRZ" id="xu9-Fh-8V1"/>
-                        <outlet property="jobNameLabel" destination="5Hd-VY-biR" id="1zY-SB-WW3"/>
                         <outlet property="jobsTableView" destination="USd-nH-ydU" id="6UN-wu-bNE"/>
                         <outlet property="statusLabel" destination="H3v-We-dqa" id="Tbl-ih-jop"/>
                     </connections>

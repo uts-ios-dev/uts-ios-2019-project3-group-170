@@ -37,8 +37,7 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         jobsTableView.delegate = self
         
         if let name = jobName {
-            jobNameLabel.text = name
-            jobIconImage.image = UIImage(named: jobIcon)
+            
             
             let newEntry = Job(id: nil, name: name, jobSymbol: jobIcon, timeEntries: entryTime!)
             
@@ -53,8 +52,7 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
             }
         }
         else {
-            jobNameLabel.text = "nil"
-            jobIconImage.image = UIImage(named: "nil")
+            statusLabel.text = "nojobs"
         }
     }
     
