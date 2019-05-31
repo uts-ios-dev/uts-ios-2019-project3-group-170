@@ -436,7 +436,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="ybH-gS-aWS" kind="show" id="brW-uy-PPi"/>
+                                    <segue destination="x2E-fF-awb" kind="presentation" id="BRt-JV-h4M"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="USd-nH-ydU">
@@ -472,7 +472,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFP-tK-Aka">
-                                                    <rect key="frame" x="246" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="435" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -743,13 +743,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:08 pm" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xPc-H6-BOa">
-                                <rect key="frame" x="61" y="74" width="253" height="84"/>
+                                <rect key="frame" x="61" y="46.5" width="253" height="84"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="70"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You haven't clocked in yet." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aM7-W0-e6e">
-                                <rect key="frame" x="112" y="170" width="151" height="14.5"/>
+                                <rect key="frame" x="112" y="142.5" width="151" height="14.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="14.33" id="5fR-y9-huT"/>
                                 </constraints>
@@ -826,7 +826,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Take a break." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssl-bI-Aqf">
-                                <rect key="frame" x="224" y="591" width="75" height="15"/>
+                                <rect key="frame" x="224" y="624.5" width="75" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="dch-SK-8XF"/>
                                 </constraints>
@@ -845,7 +845,7 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KYF-Dw-NIS" userLabel="Break Start Stack View">
-                                <rect key="frame" x="237.5" y="427" width="48" height="12"/>
+                                <rect key="frame" x="237.5" y="460.5" width="48" height="12"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hot-cup-of-coffee" translatesAutoresizingMaskIntoConstraints="NO" id="Mvb-Yp-G2H">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
@@ -863,7 +863,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3S-vL-y6N" userLabel="Shift Stack View">
-                                <rect key="frame" x="92.5" y="427" width="42" height="12"/>
+                                <rect key="frame" x="92.5" y="460.5" width="42" height="12"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stopwatch-grey" translatesAutoresizingMaskIntoConstraints="NO" id="KDf-90-vK3">
                                         <rect key="frame" x="0.0" y="0.0" width="12" height="12"/>
@@ -881,7 +881,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="eZx-LP-oBq" userLabel="Stop/PlayStack View">
-                                <rect key="frame" x="49.5" y="451" width="276" height="128"/>
+                                <rect key="frame" x="49.5" y="484.5" width="276" height="128"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DnN-Xq-KOp" userLabel="Stop Shift Button">
                                         <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -938,7 +938,7 @@
                                 </variation>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clock out." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t1m-eT-4vt">
-                                <rect key="frame" x="85" y="591" width="57.5" height="15"/>
+                                <rect key="frame" x="85" y="624.5" width="57.5" height="15"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="IJ1-xe-7Y6"/>
                                 </constraints>
@@ -2474,6 +2474,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-Mu-V9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4442" y="809"/>
+        </scene>
+        <!--AddJob-->
+        <scene sceneID="wkf-4z-Inx">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddJob" id="x2E-fF-awb" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yxA-P0-RpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715" y="-1571"/>
         </scene>
     </scenes>
     <resources>

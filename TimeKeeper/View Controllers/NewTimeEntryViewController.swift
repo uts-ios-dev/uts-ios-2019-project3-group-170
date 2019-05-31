@@ -43,24 +43,10 @@ class NewTimeEntryViewController: UIViewController {
     
     
     @IBAction func startButton(sender: AnyObject) {
-        SwiftTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-        startButton.isHidden = true
-        stopAndPause.isHidden = false
-        timeStart = date.self
+        
     }
+    
     @IBAction func pauseButton(sender: UIButton) {
-        let image = UIImage(named: "Pause")
-        pauseButton.setImage(image, for: .normal)
-        if let image = UIImage(named: "Pause") {
-            sender.setImage(UIImage(named: "PlayBlue"), for: .normal)
-            SwiftTimer.invalidate()
-            timeStartBreak = date.self
-        }
-        if let image = UIImage(named: "PlayBlue") {
-            sender.setImage(UIImage(named: "Pause"), for: .normal)
-            SwiftTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-            timeEndBreak = date.self
-        }
         
     }
     @IBAction func stopButton(sender: AnyObject) {
