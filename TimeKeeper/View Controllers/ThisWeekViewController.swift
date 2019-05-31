@@ -27,33 +27,8 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        do {
-            jobs = try dataStorage.loadJobs()
-        }
-        catch{
-            statusLabel.text = "You have not done any job"
-        }
-        jobsTableView.dataSource = self
-        jobsTableView.delegate = self
+        loadTableView()
         
-        if let name = jobName {
-            
-            
-            let newEntry = Job(id: nil, name: name, jobSymbol: jobIcon, timeEntries: entryTime!)
-            
-            jobs.append(newEntry)
-            jobsTableView.reloadData()
-            
-            //save Jobs
-            do {
-                try dataStorage.saveJobs(jobs: jobs)
-            } catch {
-                print("Error saving Jobs")
-            }
-        }
-        else {
-            statusLabel.text = "nojobs"
-        }
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -92,6 +67,18 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     /// Set the title for table section's header
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Top Jobs"
+    }
+    
+    func loadTableView() {
+        do {
+            jobs = try dataStorage.loadJobs()
+        }
+        catch{
+            statusLabel.text = "You have not done any job"
+        }
+        jobsTableView.dataSource = self
+        jobsTableView.delegate = self
+        jobsTableView.reloadData()
     }
 
 }
