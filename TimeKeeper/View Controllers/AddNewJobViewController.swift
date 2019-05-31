@@ -46,7 +46,8 @@ class AddNewJobViewController: UIViewController {
             alertController.addAction(UIAlertAction(title: "Dismiss", style: .default))
             self.present(alertController, animated: true, completion: nil)
         }
-    
+        dismiss(animated: true)
+            //do some thing here after dissmiss to reload the board
         }
     }
 }
