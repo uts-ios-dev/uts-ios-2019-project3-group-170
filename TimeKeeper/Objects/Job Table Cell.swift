@@ -9,7 +9,13 @@
 import UIKit
 
 class JobTableViewCell: UITableViewCell {
-    @IBOutlet weak var jobIcon: UIImageView!
-    @IBOutlet weak var jobName: UILabel!
-    @IBOutlet weak var jobHours: UILabel!
+    @IBOutlet weak var jobIcon: UIImageView?
+    @IBOutlet weak var jobName: UILabel?
+    @IBOutlet weak var jobHours: UILabel?
+    
+    func setJob(job: Job) {
+        jobIcon?.image = UIImage(named: job.jobSymbol)
+        jobName?.text = job.name
+        jobHours?.text = String(job.totalMinutesWorking())
+    }
 }

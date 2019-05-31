@@ -26,8 +26,9 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        loadTableView()
+        loadJob()
+        jobsTableView.dataSource = self
+        jobsTableView.delegate = self
         
     }
     
@@ -42,10 +43,13 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     
     /// Format the row cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath)
-        
+        let job = jobs[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! JobTableViewCell
         // Get and display the labels the row cells
-        let nameLabelCell: UILabel = cell.viewWithTag(1) as! UILabel
+        cell.setJob(job: job)
+        
+        return cell
+        /*let nameLabelCell: UILabel = cell.viewWithTag(1) as! UILabel
         let jobIconCell: UIImageView = cell.viewWithTag(2) as! UIImageView
         
         nameLabelCell.text = "\(indexPath.row + 1). \(jobs[indexPath.row].name)"
@@ -61,7 +65,7 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
             cell.backgroundColor = .clear
         }
         
-        return cell
+        return cell*/
     }
     
     /// Set the title for table section's header
@@ -69,16 +73,14 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         return "Top Jobs"
     }
     
-    func loadTableView() {
+    func loadJob() {
         do {
             jobs = try dataStorage.loadJobs()
         }
         catch{
             statusLabel.text = "You have not done any job"
         }
-        jobsTableView.dataSource = self
-        jobsTableView.delegate = self
-        jobsTableView.reloadData()
+        
     }
 
 }
