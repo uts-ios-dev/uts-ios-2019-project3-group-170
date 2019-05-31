@@ -17,16 +17,20 @@ class SettingsViewController: UITableViewController {
     @IBOutlet weak var firstDaySegmentControl: UISegmentedControl!
     @IBOutlet weak var notificationSwtich: UISwitch!
     
-    override func willMove(toParent parent: UIViewController?) {
-        var setting: Settings?
-        setting?.usersName = nameTextField.text
-        setting?.usersEmail = emailTextField.text
-        setting?.dateFormat = dayFormatSegmentControl.selectedSegmentIndex
-        setting?.timeFormat = timeFormatSwitch.isOn
-        setting?.firstDayOfWeek = firstDaySegmentControl.selectedSegmentIndex
-        setting?.notification = notificationSwtich.isOn
-        saveSettings(settings: setting!)
+    override func viewDidDisappear(_ animated: Bool) {
+        var setting = Settings(usersName: nil, usersEmail: nil,
+                               dateFormat: nil, timeFormat: true,
+                               firstDayOfWeek: nil, notification: true)
+        setting.usersName = nameTextField.text!
+        setting.usersEmail = emailTextField.text!
+        setting.dateFormat = dayFormatSegmentControl.selectedSegmentIndex
+        setting.timeFormat = timeFormatSwitch.isOn
+        setting.firstDayOfWeek = firstDaySegmentControl.selectedSegmentIndex
+        setting.notification = notificationSwtich.isOn
+        saveSettings(settings: setting)
+        
     }
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
         var setting: Settings? = loadSettings()
@@ -40,14 +44,13 @@ class SettingsViewController: UITableViewController {
         }
         else {
             var setting: Settings?
-            setting?.timeFormat = true
-            setting?.notification = true
-            saveSettings(settings: setting!)
+            setting?.timeFormat = false
+            setting?.notification = false
+            if(setting != nil){
+                saveSettings(settings: setting!)
+            }
         }
     }
-    
-    
-
     
     func loadSettings() -> Settings? {
         let dataStorage = DataStorage()
@@ -69,6 +72,7 @@ class SettingsViewController: UITableViewController {
         let dataStorage = DataStorage()
         
         do {
+            print("do")
             try dataStorage.saveSettings(settings: settings)
         } catch {
             // The save didnt work, please do something here

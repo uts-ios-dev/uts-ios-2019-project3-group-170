@@ -16,4 +16,14 @@ struct Settings: Codable {
     var timeFormat: Bool
     var firstDayOfWeek: Int?
     var notification: Bool
+    
+    init(usersName: String? = nil, usersEmail: String? = nil, dateFormat: Int? = nil,
+        timeFormat: Bool, firstDayOfWeek: Int? = nil, notification:Bool) {
+        self.usersName = usersName
+        self.usersEmail = usersEmail
+        self.dateFormat = dateFormat
+        self.timeFormat = timeFormat
+        self.firstDayOfWeek = firstDayOfWeek
+        self.notification = notification
+    }
 }
