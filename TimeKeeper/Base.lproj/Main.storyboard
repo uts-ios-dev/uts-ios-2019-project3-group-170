@@ -1491,7 +1491,7 @@
         <!--Reports-->
         <scene sceneID="YLc-sW-EBe">
             <objects>
-                <viewController id="PKm-pU-KXI" sceneMemberID="viewController">
+                <viewController id="PKm-pU-KXI" customClass="ReportsViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4fq-Zc-yWM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1514,7 +1514,7 @@
                                     <constraint firstAttribute="width" constant="524" id="Reb-79-eXO"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Xcx-OL-Bd5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="JobsTableCell" id="Xcx-OL-Bd5" customClass="JobTableViewCell" customModule="TimeKeeper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xcx-OL-Bd5" id="oVt-Aw-WFC">
@@ -1605,6 +1605,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Reports" image="Reports Icon Tab" id="a3W-uX-J6c"/>
                     <navigationItem key="navigationItem" title="Reports" id="42E-3M-mPJ"/>
+                    <connections>
+                        <outlet property="jobsTableView" destination="1M1-Qj-RKC" id="GFf-Ww-sRh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYK-9P-cks" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

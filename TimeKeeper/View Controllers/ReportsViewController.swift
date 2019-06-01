@@ -8,12 +8,47 @@
 
 import UIKit
 
-class ReportsViewController: UIViewController {
+class ReportsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
+    @IBOutlet weak var jobsTableView: UITableView!
+    
+    let dataStorage: DataStorage = DataStorage()
+    var jobs: [Job] = []
+    let maxRowsToShow: Int = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadJob()
+        jobsTableView.dataSource = self
+        jobsTableView.delegate = self
+        jobsTableView.reloadData()
         // Do any additional setup after loading the view.
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return min(jobs.count, maxRowsToShow)
+    }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let job = jobs[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "JobsTableCell") as! JobTableViewCell
+        // Get and display the labels the row cells
+        cell.setJob(job: job)
+        return cell
+    }
+    
+    func loadJob() {
+        do {
+            jobs = try dataStorage.loadJobs()
+        }
+        catch{
+            let alert = UIAlertController(title: "No Job",
+                                          message: "Please add more jobs",
+                                          preferredStyle: .alert)
+            present(alert, animated: true)
+        }
+        
+    }
 }

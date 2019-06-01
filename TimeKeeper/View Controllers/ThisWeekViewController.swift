@@ -103,6 +103,11 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
                                         }
                                         
                                         self.jobs.append(Job(id: 2, name: nameToSave, jobSymbol: nameToSave, timeEntries: []))
+                                        do {
+                                            try self.dataStorage.saveJobs(jobs: self.jobs)
+                                        } catch {
+                                            print("Error saving scoreboard")
+                                        }
                                         self.jobsTableView.reloadData()
         }
         
@@ -110,10 +115,8 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
                                          style: .cancel)
         
         alert.addTextField()
-        
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
-        
         present(alert, animated: true)
     }
 }
