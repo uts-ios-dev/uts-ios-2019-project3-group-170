@@ -45,10 +45,10 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     /// Format the row cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let job = jobs[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell") as! JobTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! JobTableViewCell
         // Get and display the labels the row cells
-        cell.setJob(job: job)
-        
+        //cell.setJob(job: job)
+        cell.jobName?.text = job.name
         return cell
         /*let nameLabelCell: UILabel = cell.viewWithTag(1) as! UILabel
         let jobIconCell: UIImageView = cell.viewWithTag(2) as! UIImageView

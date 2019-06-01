@@ -1568,6 +1568,10 @@
                                         <include reference="Reb-79-eXO"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="PKm-pU-KXI" id="QWH-bX-Z6U"/>
+                                    <outlet property="delegate" destination="PKm-pU-KXI" id="ZkK-wR-rgl"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
