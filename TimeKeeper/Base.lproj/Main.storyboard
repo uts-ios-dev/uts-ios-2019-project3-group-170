@@ -436,7 +436,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="x2E-fF-awb" kind="presentation" id="BRt-JV-h4M"/>
+                                    <action selector="addJob:" destination="QX8-XK-0nV" eventType="touchUpInside" id="ZIU-T0-mIp"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="USd-nH-ydU">
@@ -2478,14 +2478,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Ni-Mu-V9t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4442" y="809"/>
-        </scene>
-        <!--AddJob-->
-        <scene sceneID="wkf-4z-Inx">
-            <objects>
-                <viewControllerPlaceholder storyboardName="AddJob" id="x2E-fF-awb" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yxA-P0-RpJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2715" y="-1571"/>
         </scene>
     </scenes>
     <resources>

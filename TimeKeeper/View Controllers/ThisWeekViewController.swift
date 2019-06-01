@@ -29,7 +29,8 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         loadJob()
         jobsTableView.dataSource = self
         jobsTableView.delegate = self
-        
+        loadTableView()
+        NotificationCenter.default.addObserver(self, selector: #selector(loadTableView), name: NSNotification.Name(rawValue: "loadTable"), object: nil)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -83,4 +84,37 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         
     }
 
+    @objc func loadTableView() {
+        self.jobsTableView.reloadData()
+    }
+    @IBAction func addJob(_ sender: UIButton) {
+        
+        let alert = UIAlertController(title: "New Job",
+                                      message: "Add a new Job name",
+                                      preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save",
+                                       style: .default) {
+                                        [unowned self] action in
+                                        
+                                        guard let textField = alert.textFields?.first,
+                                            let nameToSave = textField.text else {
+                                                return
+                                        }
+                                        
+                                        self.jobs.append(Job(id: 2, name: nameToSave, jobSymbol: nameToSave, timeEntries: []))
+                                        self.jobsTableView.reloadData()
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel)
+        
+        alert.addTextField()
+        
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true)
+    }
 }
+

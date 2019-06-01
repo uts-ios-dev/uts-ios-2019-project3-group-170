@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0979C27A22A1448A0073B968 /* AddNewJobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0979C27922A1448A0073B968 /* AddNewJobViewController.swift */; };
-		0979C27F22A146B80073B968 /* AddJob.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0979C27E22A146B80073B968 /* AddJob.storyboard */; };
 		3DEC6BE1228B961B00106856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE0228B961B00106856 /* AppDelegate.swift */; };
 		3DEC6BE3228B961B00106856 /* ThisWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE2228B961B00106856 /* ThisWeekViewController.swift */; };
 		3DEC6BE6228B961B00106856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE4228B961B00106856 /* Main.storyboard */; };
@@ -31,8 +29,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0979C27922A1448A0073B968 /* AddNewJobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewJobViewController.swift; sourceTree = "<group>"; };
-		0979C27E22A146B80073B968 /* AddJob.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = AddJob.storyboard; path = TimeKeeper/TimeKeeper/AddJob/AddJob.storyboard; sourceTree = "<group>"; };
 		3DEC6BDD228B961B00106856 /* TimeKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEC6BE0228B961B00106856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DEC6BE2228B961B00106856 /* ThisWeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisWeekViewController.swift; sourceTree = "<group>"; };
@@ -70,7 +66,6 @@
 		3DEC6BD4228B961A00106856 = {
 			isa = PBXGroup;
 			children = (
-				0979C27E22A146B80073B968 /* AddJob.storyboard */,
 				3DEC6BDF228B961B00106856 /* TimeKeeper */,
 				3DEC6BDE228B961B00106856 /* Products */,
 			);
@@ -123,7 +118,6 @@
 				89EA20232294CCCC00D4BB72 /* EditTimeEntryViewController.swift */,
 				8927DE4F228E558500D29CC9 /* SettingsViewController.swift */,
 				8927DE58228E807000D29CC9 /* TimeEntryController.swift */,
-				0979C27922A1448A0073B968 /* AddNewJobViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -195,7 +189,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DEC6BEB228B961B00106856 /* LaunchScreen.storyboard in Resources */,
-				0979C27F22A146B80073B968 /* AddJob.storyboard in Resources */,
 				3DEC6BE8228B961B00106856 /* Assets.xcassets in Resources */,
 				3DEC6BE6228B961B00106856 /* Main.storyboard in Resources */,
 			);
@@ -216,7 +209,6 @@
 				8927DE52228E6DCF00D29CC9 /* Settings.swift in Sources */,
 				8927DE54228E6EAF00D29CC9 /* DataStorage.swift in Sources */,
 				8927DE57228E77CE00D29CC9 /* ManualTimeEntryViewController.swift in Sources */,
-				0979C27A22A1448A0073B968 /* AddNewJobViewController.swift in Sources */,
 				8927DE50228E558500D29CC9 /* SettingsViewController.swift in Sources */,
 				89EA20222294CC7700D4BB72 /* JobViewController.swift in Sources */,
 				8927DE4E228E551C00D29CC9 /* JobsViewController.swift in Sources */,
