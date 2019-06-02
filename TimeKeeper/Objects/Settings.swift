@@ -10,12 +10,12 @@ import Foundation
 
 // Used to store the users settings to persistant storage
 struct Settings: Codable {
-    var usersName: String?
+    var usersName: String? 
     var usersEmail: String?
     var dateFormat: Int?
-    var timeFormat: Bool
+    var timeFormat: Bool = true
     var firstDayOfWeek: Int?
-    var notification: Bool
+    var notification: Bool = true
     
     init(usersName: String? = nil, usersEmail: String? = nil, dateFormat: Int? = nil,
         timeFormat: Bool, firstDayOfWeek: Int? = nil, notification:Bool) {

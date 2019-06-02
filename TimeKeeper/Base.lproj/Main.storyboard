@@ -1817,6 +1817,9 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="updateName:" destination="R34-GS-kfd" eventType="editingDidBegin" id="YKv-EX-c3K"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1848,6 +1851,9 @@
                                                     <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="updateEmail:" destination="R34-GS-kfd" eventType="editingDidBegin" id="ZfS-6a-fsO"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
