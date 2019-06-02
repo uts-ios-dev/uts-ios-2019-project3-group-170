@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  TimeKeeper
 //
-//  Created by Trent Diamond on 15/5/19.
+//  Created by Hai Nguyen on 15/5/19.
 //  Copyright © 2019 Trent Diamond. All rights reserved.
 //
 
@@ -45,10 +45,9 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     /// Format the row cells
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let job = jobs[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! JobTableViewCell
+        let cell = jobsTableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! JobTableViewCell
         // Get and display the labels the row cells
-        //cell.setJob(job: job)
-        cell.jobName?.text = job.name
+        cell.setJob(job: job)
         return cell
         /*let nameLabelCell: UILabel = cell.viewWithTag(1) as! UILabel
         let jobIconCell: UIImageView = cell.viewWithTag(2) as! UIImageView

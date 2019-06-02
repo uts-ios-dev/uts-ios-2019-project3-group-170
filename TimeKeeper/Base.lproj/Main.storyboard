@@ -496,6 +496,11 @@
                                                 <constraint firstItem="5Hd-VY-biR" firstAttribute="top" secondItem="l65-Fq-3Xq" secondAttribute="topMargin" id="qPo-Tj-whW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jobHours" destination="vFP-tK-Aka" id="r3Y-aM-r99"/>
+                                            <outlet property="jobIcon" destination="8ga-84-aRZ" id="uu4-gC-QXY"/>
+                                            <outlet property="jobName" destination="5Hd-VY-biR" id="tGs-g1-Umr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -523,10 +528,6 @@
                                         <include reference="Ypt-1P-jXx"/>
                                     </mask>
                                 </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="QX8-XK-0nV" id="Nga-aF-pMf"/>
-                                    <outlet property="delegate" destination="QX8-XK-0nV" id="xCI-Ns-FBu"/>
-                                </connections>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="RMe-Xy-4Jb">
                                 <rect key="frame" x="20" y="64" width="335" height="309"/>
@@ -1563,6 +1564,11 @@
                                                 <constraint firstItem="X4g-yd-Wm8" firstAttribute="top" secondItem="oVt-Aw-WFC" secondAttribute="topMargin" id="vdM-mM-WJ0"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="jobHours" destination="vSa-14-qLI" id="Qr4-Y8-wcI"/>
+                                            <outlet property="jobIcon" destination="seY-qP-DtE" id="S4t-4Z-URl"/>
+                                            <outlet property="jobName" destination="X4g-yd-Wm8" id="Mn5-wr-oTt"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
