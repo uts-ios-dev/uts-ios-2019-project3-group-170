@@ -14,6 +14,11 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         // load the jobs from storage and list them in the table
         jobs = loadJobs()
+        
+        jobsTable.delegate = self
+        jobsTable.dataSource = self
+        
+        jobsTable.reloadData()
     }
     
     var jobs: [Job]?
@@ -37,7 +42,23 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     // Format the row cells with the prototype cell class ScoreTableViewCell
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return JobTableViewCell()
+        let cell = jobsTable.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! JobTableViewCell
+        
+        let job = jobs![indexPath.row]
+        
+        cell.jobName?.text = job.name
+        // set the job icon
+        //cell.jobIcon?.image. = job.jobSymbol
+        cell.jobHours?.text = String( job.totalMinutesWorkingThisWeek())
+        
+        if indexPath.row % 2 == 1 {
+            cell.backgroundColor = UIColor.init(red: 225.0/255.0, green: 220.0/255.0, blue: 23.0/255.0, alpha: 1.0)
+        }
+        else {
+            cell.backgroundColor = .clear
+        }
+
+        return cell
     }
     
     func emptyMessage(message:String, viewController:UITableView) {
