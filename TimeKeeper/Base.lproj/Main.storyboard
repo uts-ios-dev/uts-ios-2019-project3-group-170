@@ -733,6 +733,7 @@
                     <connections>
                         <outlet property="jobsTableView" destination="USd-nH-ydU" id="6UN-wu-bNE"/>
                         <outlet property="statusLabel" destination="H3v-We-dqa" id="Tbl-ih-jop"/>
+                        <segue destination="ybH-gS-aWS" kind="showDetail" identifier="NewEntry" id="luY-6S-Vbl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tzv-CK-lo8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1127,7 +1128,6 @@
                         <outlet property="currentTime" destination="xPc-H6-BOa" id="Pmo-QE-iuv"/>
                         <outlet property="startButton" destination="bcS-iO-OOD" id="FHv-bP-OEf"/>
                         <outlet property="stopAndPause" destination="eZx-LP-oBq" id="dib-Zx-cnD"/>
-                        <outletCollection property="efse" destination="Vot-Re-Jlm" id="qRP-7D-AuT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CV0-EQ-qDq" userLabel="First Responder" sceneMemberID="firstResponder"/>

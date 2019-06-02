@@ -10,15 +10,14 @@ import UIKit
 
 class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-    @IBOutlet weak var jobIconImage: UIImageView!
-    @IBOutlet weak var jobNameLabel: UILabel!
     @IBOutlet weak var jobsTableView: UITableView!
     @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var hoursLable: UILabel!
+
     
     var jobName: String?
     var jobIcon: String!
     var entryTime: [TimeEntry]?
+    var selectedJob: Job?
     
     let dataStorage: DataStorage = DataStorage()
     var jobs: [Job] = []
@@ -71,6 +70,17 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     /// Set the title for table section's header
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Top Jobs"
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(jobs[indexPath.row])")
+        selectedJob = jobs[indexPath.row]
+        self.performSegue(withIdentifier: "NewEntry", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detail = segue.destination as! NewTimeEntryViewController
+        detail.job = selectedJob
     }
     
     func loadJob() {

@@ -13,6 +13,7 @@ class NewTimeEntryViewController: UIViewController {
     let dataStorage = DataStorage()
     let date = Date()
     let calendar = Calendar.current
+    var job: Job?
     
     var dateComponents = DateComponents()
     var SwiftTimer = Timer()
@@ -24,17 +25,13 @@ class NewTimeEntryViewController: UIViewController {
     var timeEndBreak: Date!
     var hoursWorking: Double = 0.0
     
-    @IBOutlet weak var pauseButton: UIButton!
     @IBOutlet var countingLabel: UILabel!
     @IBOutlet weak var currentTime: UILabel!
-    @IBOutlet weak var stopAndPause: UIStackView!
-    @IBOutlet weak var startButton: UIButton!
    // @IBOutlet var gsdf:
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        stopAndPause.isHidden = true
         countingLabel.text = String(SwiftCounter)
         SwiftTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
 
@@ -42,17 +39,8 @@ class NewTimeEntryViewController: UIViewController {
     }
     
     
-    @IBAction func startButton(sender: AnyObject) {
-        
-    }
-    
-    @IBAction func pauseButton(sender: UIButton) {
-        
-    }
     @IBAction func stopButton(sender: AnyObject) {
         hoursWorking = Double(SwiftCounter) / 3600
-        stopAndPause.isHidden = true
-        startButton.isHidden = false
         SwiftTimer.invalidate()
         SwiftCounter = 0
         countingLabel.text = String(SwiftCounter)
