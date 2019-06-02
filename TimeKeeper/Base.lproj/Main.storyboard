@@ -1228,6 +1228,14 @@
                                     </mask>
                                 </variation>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jE-4o-hl1" userLabel="Add Button">
+                                <rect key="frame" x="40" y="538" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jr6-U3-PJb"/>
+                                    <constraint firstAttribute="width" secondItem="5jE-4o-hl1" secondAttribute="height" multiplier="1:1" id="qxW-FH-ZXW"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="Plus button"/>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKy-2M-Gxw">
                                 <rect key="frame" x="334" y="761" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1242,8 +1250,10 @@
                             <constraint firstItem="59a-UZ-Apa" firstAttribute="centerY" secondItem="Ng8-1Z-K1m" secondAttribute="centerY" id="Eyx-cE-Rj2"/>
                             <constraint firstItem="59a-UZ-Apa" firstAttribute="leading" secondItem="zlJ-1q-Yew" secondAttribute="leading" constant="20" id="Fow-TB-7fB"/>
                             <constraint firstItem="zlJ-1q-Yew" firstAttribute="trailing" secondItem="59a-UZ-Apa" secondAttribute="trailing" constant="20" id="akE-rf-QOe"/>
+                            <constraint firstItem="zlJ-1q-Yew" firstAttribute="bottom" secondItem="5jE-4o-hl1" secondAttribute="bottom" constant="20" id="mFf-WV-yhD"/>
                             <constraint firstItem="59a-UZ-Apa" firstAttribute="centerX" secondItem="Ng8-1Z-K1m" secondAttribute="centerX" id="mUL-zz-qXn"/>
                             <constraint firstItem="59a-UZ-Apa" firstAttribute="top" secondItem="zlJ-1q-Yew" secondAttribute="top" id="qLv-gD-R25"/>
+                            <constraint firstItem="5jE-4o-hl1" firstAttribute="leading" secondItem="zlJ-1q-Yew" secondAttribute="leading" constant="40" id="tNo-Fn-oUl"/>
                             <constraint firstItem="59a-UZ-Apa" firstAttribute="bottom" secondItem="zlJ-1q-Yew" secondAttribute="bottom" id="vwV-c1-lk4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="zlJ-1q-Yew"/>

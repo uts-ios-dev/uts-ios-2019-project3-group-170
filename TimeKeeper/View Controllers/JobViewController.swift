@@ -44,12 +44,14 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = jobsTable.dequeueReusableCell(withIdentifier: "JobCell", for: indexPath) as! JobTableViewCell
         
-        let job = jobs![indexPath.row]
+        let job = jobs?[indexPath.row]
         
-        cell.jobName?.text = job.name
+        cell.jobName?.text = job?.name
         // set the job icon
         //cell.jobIcon?.image. = job.jobSymbol
-        cell.jobHours?.text = String( job.totalMinutesWorkingThisWeek())
+        if job?.totalMinutesWorkingThisWeek() != nil {
+            cell.jobHours?.text = String(job!.totalMinutesWorkingThisWeek())
+        }
         
         if indexPath.row % 2 == 1 {
             cell.backgroundColor = UIColor.init(red: 225.0/255.0, green: 220.0/255.0, blue: 23.0/255.0, alpha: 1.0)
