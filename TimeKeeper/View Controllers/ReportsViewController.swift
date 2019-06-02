@@ -16,6 +16,7 @@ class ReportsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     let dataStorage: DataStorage = DataStorage()
     var jobs: [Job] = []
+    var selectedJob: Job?
     let maxRowsToShow: Int = 10
     
     override func viewDidLoad() {
@@ -37,6 +38,12 @@ class ReportsViewController: UIViewController, UITableViewDelegate, UITableViewD
         // Get and display the labels the row cells
         cell.setJob(job: job)
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(jobs[indexPath.row])")
+        //selectedJob = jobs[indexPath.row]
+        //self.performSegue(withIdentifier: "JobDetail", sender: nil)
     }
     
     func loadJob() {

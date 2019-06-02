@@ -11,7 +11,7 @@ import UIKit
 class NewTimeEntryViewController: UIViewController {
     
     let dataStorage = DataStorage()
-    let date = Date()
+    var date: Date { return Date() }
     let calendar = Calendar.current
     var job: Job?
     
@@ -25,41 +25,47 @@ class NewTimeEntryViewController: UIViewController {
     var timeEndBreak: Date!
     var hoursWorking: Double = 0.0
     
-    @IBOutlet var countingLabel: UILabel!
-    @IBOutlet weak var currentTime: UILabel!
-   // @IBOutlet var gsdf:
+    @IBOutlet weak var clockLabel: UILabel!
+    @IBOutlet weak var statusLabel: UILabel!
+    @IBOutlet weak var hoursOfWorkingLabel: UILabel!
+    @IBOutlet weak var jobNameLabel: UILabel!
+    @IBOutlet weak var startBreakLabel: UIStackView!
+    @IBOutlet weak var endShiftLabel: UIStackView!
+    // @IBOutlet var gsdf:
+    @IBOutlet weak var stopLabel: UILabel!
+    @IBOutlet weak var startLabel: UILabel!
+    @IBOutlet weak var startShiftLabel: UILabel!
+    
+    @IBOutlet weak var startShift: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        countingLabel.text = String(SwiftCounter)
         SwiftTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(tick), userInfo: nil, repeats: true)
 
         // Make a popup asking which job they would like to log their time against
     }
     
-    
-    @IBAction func stopButton(sender: AnyObject) {
-        hoursWorking = Double(SwiftCounter) / 3600
-        SwiftTimer.invalidate()
-        SwiftCounter = 0
-        countingLabel.text = String(SwiftCounter)
+    @IBAction func startShift(_ sender: UIButton) {
         
-        let entry = TimeEntry(id: nil,startTime: timeStart, endTime: timeEnd, breakStartTime: timeStartBreak, breakEndTime: timeEndBreak, hasBeenEdited: false, originalStartTime: nil, originalEndTime: nil, hoursOfWork: hoursWorking)
-        do {
-            try dataStorage.saveTimeEntry(entry: [entry])
-        } catch {
-            print(error)
-        }
+    }
+    
+    @IBAction func startBreak(_ sender: UIButton) {
+    }
+    
+    @IBAction func stopBreak(_ sender: UIButton) {
+    }
+    
+    @IBAction func stopShift(_ sender: UIButton) {
     }
     
     @objc func updateCounter() {
         SwiftCounter += 1
-        countingLabel.text = String(SwiftCounter)
+       // countingLabel.text = String(SwiftCounter)
     }
     
     @objc func tick() {
-        currentTime.text = DateFormatter.localizedString(from: date, dateStyle: .none, timeStyle: .medium)
+        clockLabel.text = DateFormatter.localizedString(from: date, dateStyle: .none, timeStyle: .short)
     }
     func intToTime(_ totalSeconds: Int) -> String {
         let seconds: Int = totalSeconds % 60
