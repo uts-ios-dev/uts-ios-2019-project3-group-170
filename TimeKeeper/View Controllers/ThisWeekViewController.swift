@@ -111,7 +111,7 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
                                                 return
                                         }
                                         
-                                        self.jobs.append(Job(id: 2, name: nameToSave, jobSymbol: nameToSave, timeEntries: []))
+                                        self.jobs.append(Job(id: self.jobs.count, name: nameToSave, jobSymbol: nameToSave, timeEntries: []))
                                         do {
                                             try self.dataStorage.saveJobs(jobs: self.jobs)
                                         } catch {

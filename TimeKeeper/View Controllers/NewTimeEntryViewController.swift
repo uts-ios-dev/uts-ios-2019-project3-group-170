@@ -70,7 +70,7 @@ class NewTimeEntryViewController: UIViewController {
         stopLabel.isHidden = false
         startLabel.isHidden = false
         jobTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
-        timeStart = date.self
+        timeStart = date
         statusLabel.text = "You have clocked in to work"
     }
     
@@ -87,7 +87,7 @@ class NewTimeEntryViewController: UIViewController {
         jobTimer.invalidate()
         jobTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateTimeBreak), userInfo: nil, repeats: true)
         jobNameLabel.text = "Enjoy your break! :)"
-        timeStartBreak = date.self
+        timeStartBreak = date
     }
     
     @IBAction func stopBreak(_ sender: UIButton) {
@@ -103,7 +103,7 @@ class NewTimeEntryViewController: UIViewController {
         jobTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateCounter), userInfo: nil, repeats: true)
         jobNameLabel.text = job?.name
         timeBreak = 0
-        timeEndBreak = date.self
+        timeEndBreak = date
     }
     
     @IBAction func stopShift(_ sender: UIButton) {
@@ -150,9 +150,10 @@ class NewTimeEntryViewController: UIViewController {
     }
     
     func actionStopShift() {
-        timeEnd = date.self
+        timeEnd = date
         hoursWorking = (Double(SwiftCounter) / 3600)
         job?.timeEntries.append(TimeEntry(id: nil, startTime: timeStart, endTime: timeEnd, breakStartTime: timeStartBreak, breakEndTime: timeEndBreak, hasBeenEdited: false, originalStartTime: nil, originalEndTime: nil, hoursOfWork: hoursWorking))
+        jobs[(job?.id)!] = job!
         do {
             try self.dataStorage.saveJobs(jobs: jobs)
         } catch {

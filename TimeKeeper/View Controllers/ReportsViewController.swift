@@ -43,7 +43,7 @@ class ReportsViewController: UIViewController, UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(jobs[indexPath.row])")
         //selectedJob = jobs[indexPath.row]
-        //self.performSegue(withIdentifier: "JobDetail", sender: nil)
+        self.performSegue(withIdentifier: "JobDetail", sender: nil)
     }
     
     func loadJob() {
