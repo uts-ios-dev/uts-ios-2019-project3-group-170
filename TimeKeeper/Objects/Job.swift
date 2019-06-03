@@ -9,7 +9,7 @@
 import Foundation
 
 struct Job: Codable {
-    var id: Int8?
+    var id: Int!
     var name: String
     var jobSymbol: String
     var timeEntries: [TimeEntry]
@@ -36,5 +36,13 @@ struct Job: Codable {
         }
         
         return totalTime
+    }
+    
+    func totalTimeWorking() -> Double {
+        var hours: Double = 0
+        for timeEntry in timeEntries {
+            hours += timeEntry.hoursOfWork
+        }
+        return hours
     }
 }

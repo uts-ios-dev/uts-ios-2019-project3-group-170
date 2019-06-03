@@ -8,7 +8,7 @@
 
 import UIKit
 
-class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class JobViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

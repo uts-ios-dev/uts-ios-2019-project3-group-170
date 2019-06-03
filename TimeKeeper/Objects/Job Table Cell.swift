@@ -16,6 +16,6 @@ class JobTableViewCell: UITableViewCell {
     func setJob(job: Job) {
         jobIcon?.image = UIImage(named: job.jobSymbol)
         jobName?.text = job.name
-        jobHours?.text = String(job.totalMinutesWorking())
+        jobHours?.text = String(job.totalTimeWorking())
     }
 }
