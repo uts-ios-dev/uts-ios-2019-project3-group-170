@@ -128,13 +128,13 @@ class NewTimeEntryViewController: UIViewController {
         if totalSeconds > 60 {
         let seconds: Int = totalSeconds % 60
         let minutes: Int = (totalSeconds / 60) % 60
-            return String(format: "%01d:%02d", minutes, seconds)
+            return String(format: "%01dm%02ds", minutes, seconds)
             
         }
         else if totalSeconds > 3600 {
             let minutes: Int = totalSeconds % 3600
             let hours: Int = (totalSeconds / 3600) % 3600
-            return String(format: "%01d:%02d", hours, minutes)
+            return String(format: "%01dh%02dm", hours, minutes)
             
         }
         return String(totalSeconds)
