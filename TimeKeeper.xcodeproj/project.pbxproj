@@ -22,6 +22,7 @@
 		8927DE57228E77CE00D29CC9 /* ManualTimeEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE56228E77CE00D29CC9 /* ManualTimeEntryViewController.swift */; };
 		8927DE59228E807000D29CC9 /* TimeEntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE58228E807000D29CC9 /* TimeEntryController.swift */; };
 		8929549E229BC65200C2A84A /* Job Table Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8929549D229BC65200C2A84A /* Job Table Cell.swift */; };
+		892DAAB322A51FDE0065FD75 /* Job Detail Table Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 892DAAB222A51FDE0065FD75 /* Job Detail Table Cell.swift */; };
 		89EA201E2294CBCF00D4BB72 /* NewTimeEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA201D2294CBCF00D4BB72 /* NewTimeEntryViewController.swift */; };
 		89EA20202294CC3200D4BB72 /* JobReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA201F2294CC3200D4BB72 /* JobReportViewController.swift */; };
 		89EA20222294CC7700D4BB72 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA20212294CC7700D4BB72 /* JobViewController.swift */; };
@@ -46,6 +47,7 @@
 		8927DE56228E77CE00D29CC9 /* ManualTimeEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManualTimeEntryViewController.swift; sourceTree = "<group>"; };
 		8927DE58228E807000D29CC9 /* TimeEntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntryController.swift; sourceTree = "<group>"; };
 		8929549D229BC65200C2A84A /* Job Table Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Job Table Cell.swift"; sourceTree = "<group>"; };
+		892DAAB222A51FDE0065FD75 /* Job Detail Table Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Job Detail Table Cell.swift"; sourceTree = "<group>"; };
 		89EA201D2294CBCF00D4BB72 /* NewTimeEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTimeEntryViewController.swift; sourceTree = "<group>"; };
 		89EA201F2294CC3200D4BB72 /* JobReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobReportViewController.swift; sourceTree = "<group>"; };
 		89EA20212294CC7700D4BB72 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				8927DE51228E6DCF00D29CC9 /* Settings.swift */,
 				8927DE48228E487400D29CC9 /* TimeEntry.swift */,
 				8929549D229BC65200C2A84A /* Job Table Cell.swift */,
+				892DAAB222A51FDE0065FD75 /* Job Detail Table Cell.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -204,6 +207,7 @@
 				8927DE47228E47AA00D29CC9 /* Job.swift in Sources */,
 				3DEC6BE3228B961B00106856 /* ThisWeekViewController.swift in Sources */,
 				8929549E229BC65200C2A84A /* Job Table Cell.swift in Sources */,
+				892DAAB322A51FDE0065FD75 /* Job Detail Table Cell.swift in Sources */,
 				8927DE59228E807000D29CC9 /* TimeEntryController.swift in Sources */,
 				89EA20202294CC3200D4BB72 /* JobReportViewController.swift in Sources */,
 				8927DE52228E6DCF00D29CC9 /* Settings.swift in Sources */,

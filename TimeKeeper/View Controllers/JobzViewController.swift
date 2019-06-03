@@ -12,17 +12,46 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        updateNavigationBar()
     }
     
     var job: Job?
+    @IBOutlet weak var jobTabel: UITableView!
+    @IBOutlet weak var nativationBar: UINavigationItem!
+    
+    func updateNavigationBar(){
+        self.nativationBar.title = job?.name
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let cell = jobTabel.dequeueReusableCell(withIdentifier: "Job Detail View Cell", for: indexPath) as! JobDetailTableViewCell
+        
+        let timeEntry = job?.timeEntries[indexPath.row]
+        
+        
+        cell.dateLabel.text = "11/11/11" // To be implemented
+        cell.startEndLabel.text = setStartEndLabel(startDate: timeEntry!.startTime, endDate: timeEntry!.endTime)
+        cell.timeLabel.text = setTimeLabel(amountOfMinutes: (timeEntry?.totalAmountOfMinutesWorking())!)
+        
+        return JobTableViewCell()
     }
     
+    func setStartEndLabel(startDate: Date, endDate: Date) -> String {
+        // To be implemented
+        return ""
+    }
+    
+    func setTimeLabel(amountOfMinutes: Int) -> String {
+        // To be implemented
+        
+        return ""
+    }
+    
+    @IBAction func addTimeEntry(_ sender: UIButton) {
+    }
 }

@@ -50,7 +50,7 @@ class JobsViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         cell.jobName?.text = job?.name
         // set the job icon
-        cell.jobIcon?.image = UIImage(named: job?.jobSymbol ?? "Jobs Icon")
+        cell.jobIcon?.image = UIImage(named: job?.jobSymbol ?? "Pizza")
         if job?.totalMinutesWorkingThisWeek() != nil {
             cell.jobHours?.text = String(job!.totalMinutesWorkingThisWeek())
         }
@@ -64,7 +64,7 @@ class JobsViewController: UIViewController, UITableViewDelegate, UITableViewData
         performSegue(withIdentifier: "Show Job", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detail = segue.destination as! NewTimeEntryViewController
+        let detail = segue.destination as! JobViewController
         detail.job = selectedJob
     }
     
