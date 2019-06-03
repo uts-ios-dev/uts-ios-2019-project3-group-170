@@ -1626,7 +1626,7 @@
                     <navigationItem key="navigationItem" title="Reports" id="42E-3M-mPJ"/>
                     <connections>
                         <outlet property="jobsTableView" destination="1M1-Qj-RKC" id="GFf-Ww-sRh"/>
-                        <segue destination="tQ5-u2-gpx" kind="showDetail" id="Ugh-UG-4zX"/>
+                        <segue destination="tQ5-u2-gpx" kind="showDetail" identifier="JobDetail" id="D8a-q4-KI6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYK-9P-cks" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1772,6 +1772,9 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="barChartView" destination="9O6-Zr-LVJ" id="bjv-pX-bdh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVs-Z3-cgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

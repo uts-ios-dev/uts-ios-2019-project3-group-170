@@ -77,4 +77,7 @@ struct TimeEntry: Codable {
         self.originalEndTime = endTime
         self.hasBeenEdited = true
     }
+    func total() {
+        
+    }
 }
