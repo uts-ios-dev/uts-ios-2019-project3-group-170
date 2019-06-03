@@ -1325,7 +1325,7 @@
                                     </constraint>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="KaS-JP-iVW">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Job Detail View Cell" id="KaS-JP-iVW" customClass="JobDetailTableViewCell" customModule="TimeKeeper" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="335" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KaS-JP-iVW" id="GKd-Nk-XAU">
@@ -1374,6 +1374,11 @@
                                                 <constraint firstAttribute="bottom" secondItem="wiM-ZO-Equ" secondAttribute="bottom" id="rgQ-it-iks"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="dateLabel" destination="tsd-AW-kXH" id="nnV-03-MHh"/>
+                                            <outlet property="startEndLabel" destination="XP6-I7-0Ma" id="qHO-NR-HJL"/>
+                                            <outlet property="timeLabel" destination="04d-Sg-eXD" id="zUP-Ib-gMa"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <variation key="default">
@@ -1416,6 +1421,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
+                                    <action selector="addTimeEntry:" destination="Vk4-7S-QuB" eventType="touchUpInside" id="L0w-t3-IYf"/>
                                     <segue destination="kiv-BM-WhZ" kind="show" id="CRR-42-RWx"/>
                                 </connections>
                             </button>
@@ -1483,6 +1489,10 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="&lt;Business Name&gt;" id="Gks-SN-h3d"/>
+                    <connections>
+                        <outlet property="jobTabel" destination="5ZU-xK-h5L" id="c8c-Oq-24d"/>
+                        <outlet property="nativationBar" destination="Gks-SN-h3d" id="PFT-Jo-27p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sxh-mI-hVh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

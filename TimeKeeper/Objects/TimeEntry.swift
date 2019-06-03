@@ -67,6 +67,10 @@ struct TimeEntry: Codable {
         let calendar = Calendar.current
         
         let timeDifference = calendar.dateComponents([.minute], from: startTime, to: endTime)
+        if breakStartTime != nil && breakEndTime != nil {
+            let breakTime = calendar.dateComponents([.minute], from: breakStartTime!, to: breakEndTime!)
+            return timeDifference.minute! - breakTime.minute!
+        }
         
         return timeDifference.minute!
     }
