@@ -7,7 +7,7 @@
 //
 import UIKit
 
-class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class JobsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,8 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     var jobs: [Job]?
+    var selectedJob: Job?
+    let dataStorage: DataStorage = DataStorage()
     
     @IBOutlet weak var jobsTable: UITableView!
     
@@ -35,7 +37,7 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         if jobs!.count > 0 {
             return jobs!.count
         } else {
-            emptyMessage(message: "You don't have any jobs yet.\nYou can create up to 10.", viewController: jobsTable)
+            //emptyMessage(message: "You don't have any jobs yet.\nYou can create up to 10.", viewController: jobsTable)
             return 0
         }
     }
@@ -48,20 +50,57 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
         
         cell.jobName?.text = job?.name
         // set the job icon
-        //cell.jobIcon?.image. = job.jobSymbol
+        cell.jobIcon?.image = UIImage(named: job?.jobSymbol ?? "Jobs Icon")
         if job?.totalMinutesWorkingThisWeek() != nil {
             cell.jobHours?.text = String(job!.totalMinutesWorkingThisWeek())
-        }
-        
-        if indexPath.row % 2 == 1 {
-            cell.backgroundColor = UIColor.init(red: 225.0/255.0, green: 220.0/255.0, blue: 23.0/255.0, alpha: 1.0)
-        }
-        else {
-            cell.backgroundColor = .clear
         }
 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("\(jobs![indexPath.row])")
+        selectedJob = jobs![indexPath.row]
+        performSegue(withIdentifier: "Show Job", sender: nil)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detail = segue.destination as! NewTimeEntryViewController
+        detail.job = selectedJob
+    }
+    
+    @IBAction func addJob(_ sender: UIButton) {
+        let alert = UIAlertController(title: "New Job",
+                                      message: "Add a new Job name",
+                                      preferredStyle: .alert)
+        
+        let saveAction = UIAlertAction(title: "Save",
+                                       style: .default) {
+                                        [unowned self] action in
+                                        
+                                        guard let textField = alert.textFields?.first,
+                                            let nameToSave = textField.text else {
+                                                return
+                                        }
+                                        
+                                        self.jobs!.append(Job(id: 2, name: nameToSave, jobSymbol: nameToSave, timeEntries: []))
+                                        do {
+                                            try self.dataStorage.saveJobs(jobs: self.jobs!)
+                                        } catch {
+                                            print("Error saving scoreboard")
+                                        }
+        }
+        
+        self.jobsTable.reloadData()
+        let cancelAction = UIAlertAction(title: "Cancel",
+                                         style: .cancel)
+        
+        alert.addTextField()
+        alert.addAction(saveAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true)
+
+    }
+    
     
     func emptyMessage(message:String, viewController:UITableView) {
         let rect = CGRect(origin: CGPoint(x: 0,y :0), size: CGSize(width: self.view.bounds.size.width, height: self.view.bounds.size.height))
@@ -78,8 +117,6 @@ class JobViewController: UIViewController, UITableViewDelegate, UITableViewDataS
     }
     
     func loadJobs() -> [Job]? {
-        let dataStorage = DataStorage()
-        
         do {
             return try dataStorage.loadJobs()
         } catch {

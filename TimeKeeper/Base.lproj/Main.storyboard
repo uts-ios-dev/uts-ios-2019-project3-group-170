@@ -472,7 +472,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFP-tK-Aka">
-                                                    <rect key="frame" x="435" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="246" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1108,17 +1108,17 @@
                             <mask key="constraints">
                                 <exclude reference="n8W-Gt-w8e"/>
                                 <exclude reference="uoG-o8-0rE"/>
-                                <exclude reference="ZJq-Yl-YbU"/>
                                 <exclude reference="T2Z-G3-tnY"/>
+                                <exclude reference="ZJq-Yl-YbU"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
                                 <include reference="n8W-Gt-w8e"/>
                                 <include reference="uoG-o8-0rE"/>
+                                <include reference="T2Z-G3-tnY"/>
                                 <exclude reference="5Xo-Kb-zOs"/>
                                 <include reference="ZJq-Yl-YbU"/>
-                                <include reference="T2Z-G3-tnY"/>
                                 <exclude reference="XVS-Ln-qXu"/>
                                 <exclude reference="S4n-ac-RDw"/>
                             </mask>
@@ -1162,7 +1162,7 @@
         <!--Jobs-->
         <scene sceneID="bil-Ki-qkd">
             <objects>
-                <viewController id="qAL-8K-qvK" customClass="JobViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="qAL-8K-qvK" customClass="JobsViewController" customModule="TimeKeeper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ng8-1Z-K1m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1198,7 +1198,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2b-Kx-ph5">
-                                                    <rect key="frame" x="435" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="246" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1244,6 +1244,9 @@
                                     <constraint firstAttribute="width" secondItem="5jE-4o-hl1" secondAttribute="height" multiplier="1:1" id="qxW-FH-ZXW"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="Plus button"/>
+                                <connections>
+                                    <action selector="addJob:" destination="qAL-8K-qvK" eventType="touchUpInside" id="VdE-OF-ofH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BKy-2M-Gxw">
                                 <rect key="frame" x="334" y="761" width="46" height="30"/>
@@ -1293,6 +1296,7 @@
                     <navigationItem key="navigationItem" title="Jobs" id="VjG-AK-izV"/>
                     <connections>
                         <outlet property="jobsTable" destination="59a-UZ-Apa" id="uON-Tq-oTY"/>
+                        <segue destination="Vk4-7S-QuB" kind="show" identifier="Show Job" id="rOM-Bn-hNk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XXX-Z8-fZV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1335,7 +1339,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="wiM-ZO-Equ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="524" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="335" height="43.5"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gQC-bu-JEt">
                                                             <rect key="frame" x="0.0" y="0.0" width="148.5" height="43.5"/>
@@ -1355,13 +1359,13 @@
                                                             </subviews>
                                                         </stackView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="08h 00 min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04d-Sg-eXD">
-                                                            <rect key="frame" x="153.5" y="0.0" width="354.5" height="43.5"/>
+                                                            <rect key="frame" x="153.5" y="0.0" width="165.5" height="43.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZEh-PY-zD7">
-                                                            <rect key="frame" x="513" y="0.0" width="11" height="43.5"/>
+                                                            <rect key="frame" x="324" y="0.0" width="11" height="43.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -1545,7 +1549,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="752" text="66 hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSa-14-qLI">
-                                                    <rect key="frame" x="435" y="11" width="69" height="22"/>
+                                                    <rect key="frame" x="246" y="11" width="69" height="22"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                                     <nil key="highlightedColor"/>
@@ -1777,7 +1781,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KVs-Z3-cgl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3742" y="-98"/>
+            <point key="canvasLocation" x="3566" y="-190"/>
         </scene>
         <!--Settings Navigation Controller-->
         <scene sceneID="lDs-lD-JHE">
@@ -2041,7 +2045,7 @@
                             <outlet property="delegate" destination="R34-GS-kfd" id="TnN-H8-5p4"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Item" id="V21-8T-qO4"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="Settings Icon Tab" id="V21-8T-qO4"/>
                     <navigationItem key="navigationItem" title="Settings" id="bhE-jX-nY4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -2520,6 +2524,7 @@
         <image name="Plus button" width="279.5" height="265.5"/>
         <image name="Reports Icon Tab" width="25" height="25"/>
         <image name="Save Button" width="239.5" height="239.5"/>
+        <image name="Settings Icon Tab" width="25" height="25"/>
         <image name="Stop Red" width="128" height="128"/>
         <image name="Timer" width="239.5" height="239.5"/>
         <image name="hot-cup-of-coffee" width="128" height="128"/>
@@ -2527,6 +2532,7 @@
         <image name="stopwatch-grey" width="128" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="rOM-Bn-hNk"/>
         <segue reference="rwy-9K-LcN"/>
     </inferredMetricsTieBreakers>
 </document>

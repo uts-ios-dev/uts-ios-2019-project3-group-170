@@ -15,7 +15,7 @@
 		8927DE47228E47AA00D29CC9 /* Job.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE46228E47AA00D29CC9 /* Job.swift */; };
 		8927DE49228E487400D29CC9 /* TimeEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE48228E487400D29CC9 /* TimeEntry.swift */; };
 		8927DE4C228E542700D29CC9 /* ReportsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE4B228E542700D29CC9 /* ReportsViewController.swift */; };
-		8927DE4E228E551C00D29CC9 /* JobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE4D228E551C00D29CC9 /* JobsViewController.swift */; };
+		8927DE4E228E551C00D29CC9 /* JobzViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE4D228E551C00D29CC9 /* JobzViewController.swift */; };
 		8927DE50228E558500D29CC9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE4F228E558500D29CC9 /* SettingsViewController.swift */; };
 		8927DE52228E6DCF00D29CC9 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE51228E6DCF00D29CC9 /* Settings.swift */; };
 		8927DE54228E6EAF00D29CC9 /* DataStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8927DE53228E6EAF00D29CC9 /* DataStorage.swift */; };
@@ -39,7 +39,7 @@
 		8927DE46228E47AA00D29CC9 /* Job.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Job.swift; sourceTree = "<group>"; };
 		8927DE48228E487400D29CC9 /* TimeEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeEntry.swift; sourceTree = "<group>"; };
 		8927DE4B228E542700D29CC9 /* ReportsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportsViewController.swift; sourceTree = "<group>"; };
-		8927DE4D228E551C00D29CC9 /* JobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsViewController.swift; sourceTree = "<group>"; };
+		8927DE4D228E551C00D29CC9 /* JobzViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobzViewController.swift; sourceTree = "<group>"; };
 		8927DE4F228E558500D29CC9 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8927DE51228E6DCF00D29CC9 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		8927DE53228E6EAF00D29CC9 /* DataStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStorage.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				89EA201D2294CBCF00D4BB72 /* NewTimeEntryViewController.swift */,
 				8927DE4B228E542700D29CC9 /* ReportsViewController.swift */,
 				89EA201F2294CC3200D4BB72 /* JobReportViewController.swift */,
-				8927DE4D228E551C00D29CC9 /* JobsViewController.swift */,
+				8927DE4D228E551C00D29CC9 /* JobzViewController.swift */,
 				89EA20212294CC7700D4BB72 /* JobViewController.swift */,
 				8927DE56228E77CE00D29CC9 /* ManualTimeEntryViewController.swift */,
 				89EA20232294CCCC00D4BB72 /* EditTimeEntryViewController.swift */,
@@ -211,7 +211,7 @@
 				8927DE57228E77CE00D29CC9 /* ManualTimeEntryViewController.swift in Sources */,
 				8927DE50228E558500D29CC9 /* SettingsViewController.swift in Sources */,
 				89EA20222294CC7700D4BB72 /* JobViewController.swift in Sources */,
-				8927DE4E228E551C00D29CC9 /* JobsViewController.swift in Sources */,
+				8927DE4E228E551C00D29CC9 /* JobzViewController.swift in Sources */,
 				89EA20242294CCCC00D4BB72 /* EditTimeEntryViewController.swift in Sources */,
 				8927DE4C228E542700D29CC9 /* ReportsViewController.swift in Sources */,
 				3DEC6BE1228B961B00106856 /* AppDelegate.swift in Sources */,
