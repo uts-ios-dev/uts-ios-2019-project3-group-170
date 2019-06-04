@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Charts
 
 class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var jobsTableView: UITableView!
     @IBOutlet weak var statusLabel: UILabel!
-
+    @IBOutlet weak var barChart: BarChartView!
+    
     
     var jobName: String?
     var jobIcon: String!
@@ -29,6 +31,8 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         jobsTableView.dataSource = self
         jobsTableView.delegate = self
         loadTableView()
+        
+        updateBarChart()
         NotificationCenter.default.addObserver(self, selector: #selector(loadTableView), name: NSNotification.Name(rawValue: "loadTable"), object: nil)
     }
     
@@ -127,6 +131,28 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         alert.addAction(saveAction)
         alert.addAction(cancelAction)
         present(alert, animated: true)
+    }
+    
+    func updateBarChart() {
+        var months: [String]!
+        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+        
+        let test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+        
+        var dataEntries: [BarChartDataEntry] = []
+        
+        for i in 0..<months.count
+        {
+            let dataEntry = BarChartDataEntry(x: Double(test[i]), y: Double(unitsSold[i]))
+            
+            dataEntries.append(dataEntry)
+        }
+        
+        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Visitor count")
+        let chartData = BarChartData(dataSet: chartDataSet)
+        
+        barChart.data = chartData
     }
 }
 
