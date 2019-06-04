@@ -7,13 +7,17 @@
 //
 
 import UIKit
-import Charts
+import CoreCharts
 
-class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CoreChartViewDataSource {
+    
+    
     
     @IBOutlet weak var jobsTableView: UITableView!
     @IBOutlet weak var statusLabel: UILabel!
-    @IBOutlet weak var barChart: BarChartView!
+    @IBOutlet weak var barChart: VCoreBarChart!
+    
     
     
     var jobName: String?
@@ -31,8 +35,7 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         jobsTableView.dataSource = self
         jobsTableView.delegate = self
         loadTableView()
-        
-        updateBarChart()
+        barChart.dataSource = self
         NotificationCenter.default.addObserver(self, selector: #selector(loadTableView), name: NSNotification.Name(rawValue: "loadTable"), object: nil)
     }
     
@@ -133,26 +136,27 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         present(alert, animated: true)
     }
     
-    func updateBarChart() {
-        var months: [String]!
-        months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
-        let unitsSold = [20.0, 4.0, 6.0, 3.0, 12.0, 16.0, 4.0, 18.0, 2.0, 4.0, 5.0, 4.0]
+    func loadCoreChartData() -> [CoreChartEntry] {
+        var listJob: [String] = []
+        var hoursOfWorking: [Double] = []
         
-        let test = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-        
-        var dataEntries: [BarChartDataEntry] = []
-        
-        for i in 0..<months.count
-        {
-            let dataEntry = BarChartDataEntry(x: Double(test[i]), y: Double(unitsSold[i]))
-            
-            dataEntries.append(dataEntry)
+        for job in jobs {
+            listJob.append(job.name)
+            hoursOfWorking.append(job.totalTimeWorking())
         }
         
-        let chartDataSet = BarChartDataSet(entries: dataEntries, label: "Visitor count")
-        let chartData = BarChartData(dataSet: chartDataSet)
+        var allJobs = [CoreChartEntry]()
         
-        barChart.data = chartData
+        for i in 0..<listJob.count
+        {
+            let dataEntry = CoreChartEntry(id: String(i), barTitle: listJob[i], barHeight: hoursOfWorking[i], barColor: rainbowColor())
+            
+            allJobs.append(dataEntry)
+        }
+        
+        return allJobs
     }
+    
+    
 }
 

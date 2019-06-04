@@ -27,9 +27,9 @@ struct Job: Codable {
     
     // Loop over the array and if the time entry was within the current week, add it to the total. Once all values have been checked return the total to the calling function.
     func totalMinutesWorkingThisWeek() -> Int {
-        var totalTime = 0
+        let totalTime = 0
         
-        for timeEntry in timeEntries {
+        for _ in timeEntries {
             // if timeEntry.endTime > dateAtStartOfWeek {
             //     totalTime += timeEntry.hours
             // }

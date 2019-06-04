@@ -2,7 +2,7 @@
 //  ReportsViewController.swift
 //  TimeKeeper
 //
-//  Created by Kieran O'Brien on 17/5/19.
+//  Created by Hai Nguyen on 17/5/19.
 //  Copyright © 2019 Trent Diamond. All rights reserved.
 //
 
@@ -42,8 +42,14 @@ class ReportsViewController: UIViewController, UITableViewDelegate, UITableViewD
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("\(jobs[indexPath.row])")
+        selectedJob = jobs[indexPath.row]
         //selectedJob = jobs[indexPath.row]
         self.performSegue(withIdentifier: "JobDetail", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let detail = segue.destination as! JobReportViewController
+        detail.job = selectedJob
     }
     
     func loadJob() {

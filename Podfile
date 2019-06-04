@@ -7,6 +7,6 @@ target 'TimeKeeper' do
 
   # Pods for TimeKeeper
 
-  pod 'Charts'
+  pod 'CoreCharts'
 
 end

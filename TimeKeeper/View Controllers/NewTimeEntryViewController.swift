@@ -2,7 +2,7 @@
 //  NewTimeEntryViewController.swift
 //  TimeKeeper
 //
-//  Created by Kieran O'Brien on 22/5/19.
+//  Created by Hai Nguyen on 22/5/19.
 //  Copyright © 2019 Trent Diamond. All rights reserved.
 //
 
