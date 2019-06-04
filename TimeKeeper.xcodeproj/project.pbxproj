@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		099EBC8C22A68D8100AB5B21 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099EBC8922A68D7800AB5B21 /* Charts.framework */; };
+		099EBCA622A6FE6700AB5B21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099EBCA522A6FE6700AB5B21 /* GoogleService-Info.plist */; };
 		3DEC6BE1228B961B00106856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE0228B961B00106856 /* AppDelegate.swift */; };
 		3DEC6BE3228B961B00106856 /* ThisWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE2228B961B00106856 /* ThisWeekViewController.swift */; };
 		3DEC6BE6228B961B00106856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE4228B961B00106856 /* Main.storyboard */; };
@@ -63,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		099EBC8322A68D7700AB5B21 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master-3/Charts.xcodeproj"; sourceTree = "<group>"; };
+		099EBCA522A6FE6700AB5B21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		32B800BE7583722F5F304DA0 /* Pods-TimeKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeper.release.xcconfig"; path = "Target Support Files/Pods-TimeKeeper/Pods-TimeKeeper.release.xcconfig"; sourceTree = "<group>"; };
 		3DEC6BDD228B961B00106856 /* TimeKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEC6BE0228B961B00106856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 		3DEC6BDF228B961B00106856 /* TimeKeeper */ = {
 			isa = PBXGroup;
 			children = (
+				099EBCA522A6FE6700AB5B21 /* GoogleService-Info.plist */,
 				8927DE55228E6EB700D29CC9 /* Functions */,
 				8927DE4A228E53C700D29CC9 /* View Controllers */,
 				8927DE45228E477C00D29CC9 /* Objects */,
@@ -285,6 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DEC6BEB228B961B00106856 /* LaunchScreen.storyboard in Resources */,
+				099EBCA622A6FE6700AB5B21 /* GoogleService-Info.plist in Resources */,
 				3DEC6BE8228B961B00106856 /* Assets.xcassets in Resources */,
 				3DEC6BE6228B961B00106856 /* Main.storyboard in Resources */,
 			);

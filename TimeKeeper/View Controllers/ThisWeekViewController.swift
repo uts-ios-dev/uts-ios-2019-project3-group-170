@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreCharts
-
+import FirebaseDatabase
 
 class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, CoreChartViewDataSource {
     
@@ -25,12 +25,16 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
     var entryTime: [TimeEntry]?
     var selectedJob: Job?
     
+    
+    
     let dataStorage: DataStorage = DataStorage()
     var jobs: [Job] = []
     let maxRowsToShow: Int = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         loadJob()
         jobsTableView.dataSource = self
         jobsTableView.delegate = self
@@ -85,6 +89,25 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         self.performSegue(withIdentifier: "NewEntry", sender: nil)
     }
     
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool
+    {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration?
+    {
+        let job = jobs[indexPath.row]
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, handler) in
+            self.jobs.remove(at: job.id)
+            self.jobsTableView.deleteRows(at: [indexPath], with: .automatic)
+            self.saveJob()
+        }
+        deleteAction.backgroundColor = .red
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = false
+        return configuration
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let detail = segue.destination as! NewTimeEntryViewController
         detail.job = selectedJob
@@ -97,13 +120,14 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         catch{
             statusLabel.text = "You have not done any job"
         }
-        
+        self.jobsTableView.reloadData()
     }
 
     @objc func loadTableView() {
         self.jobsTableView.reloadData()
     }
     @IBAction func addJob(_ sender: UIButton) {
+        let ref = Database.database().reference()
         
         let alert = UIAlertController(title: "New Job",
                                       message: "Add a new Job name",
@@ -117,14 +141,9 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
                                             let nameToSave = textField.text else {
                                                 return
                                         }
-                                        
+                                        ref.child("job").child(nameToSave).setValue(["id":self.jobs.count, "name":nameToSave, "jobSymbol":nameToSave])
                                         self.jobs.append(Job(id: self.jobs.count, name: nameToSave, jobSymbol: nameToSave, timeEntries: []))
-                                        do {
-                                            try self.dataStorage.saveJobs(jobs: self.jobs)
-                                        } catch {
-                                            print("Error saving scoreboard")
-                                        }
-                                        self.jobsTableView.reloadData()
+                                        self.saveJob()
         }
         
         let cancelAction = UIAlertAction(title: "Cancel",
@@ -157,6 +176,14 @@ class ThisWeekViewController: UIViewController, UITableViewDataSource, UITableVi
         return allJobs
     }
     
+    func saveJob() {
+        do {
+            try self.dataStorage.saveJobs(jobs: self.jobs)
+        } catch {
+            print("Error saving scoreboard")
+        }
+        self.jobsTableView.reloadData()
+    }
     
 }
 

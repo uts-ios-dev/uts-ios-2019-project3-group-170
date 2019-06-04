@@ -8,5 +8,7 @@ target 'TimeKeeper' do
   # Pods for TimeKeeper
 
   pod 'CoreCharts'
+  pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
 end

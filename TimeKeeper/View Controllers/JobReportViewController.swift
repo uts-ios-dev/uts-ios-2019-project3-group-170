@@ -71,5 +71,8 @@ class JobReportViewController: UIViewController, CoreChartViewDataSource {
         
         return allJobs
     }
+    @IBAction func swipeback(_ sender: UISwipeGestureRecognizer) {
+        navigationController?.popToRootViewController(animated: true)
+    }
     
 }
