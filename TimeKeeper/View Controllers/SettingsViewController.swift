@@ -60,12 +60,10 @@ class SettingsViewController: UITableViewController {
     
     func saveSettings(settings: Settings) {
         let dataStorage = DataStorage()
-        
+    
         do {
-            print("do")
             try dataStorage.saveSettings(settings: settings)
         } catch {
-            print("BBBAM")
         }
     }
     
@@ -90,7 +88,7 @@ class SettingsViewController: UITableViewController {
         let saveAction = UIAlertAction(title: "Save",
                                        style: .default) {
                                         [unowned self] action in
-                                    guard let textField = alert.textFields?.first,
+                                        guard let textField = alert.textFields?.first,
                                             let nameToSave = textField.text else {
                                                 return
                                         }
@@ -118,13 +116,20 @@ class SettingsViewController: UITableViewController {
         let saveAction = UIAlertAction(title: "Save",
                                        style: .default) {
                                         [unowned self] action in
+                                        
                                         guard let textField = alert.textFields?.first,
                                             let emailToSave = textField.text else {
                                                 return
                                         }
-                                        
-                                        self.emailTextField.text = emailToSave
-                                        self.saveSettings(settings: self.getSetting()!)
+                                        if(!self.isValidEmail(testStr: (alert.textFields!.first?.text)!)){
+                                            alert.message = "Please use correct email format"
+                                            textField.placeholder = "example@example.com"
+                                            textField.text = ""
+                                            self.present(alert, animated: true, completion: nil)
+                                        } else {
+                                            self.emailTextField.text = emailToSave
+                                            self.saveSettings(settings: self.getSetting()!)
+                                        }
         }
         
         let cancelAction = UIAlertAction(title: "Cancel",
@@ -136,4 +141,9 @@ class SettingsViewController: UITableViewController {
         present(alert, animated: true)
     }
     
+    func isValidEmail(testStr:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailTest.evaluate(with: testStr)
+    }
 }
