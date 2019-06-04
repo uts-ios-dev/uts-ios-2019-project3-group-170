@@ -10,6 +10,7 @@ import UIKit
 
 class NewTimeEntryViewController: UIViewController {
     
+    
     let dataStorage = DataStorage()
     var date: Date { return Date() }
     let calendar = Calendar.current

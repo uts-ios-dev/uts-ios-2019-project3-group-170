@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0979C28922A5550D0073B968 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0979C28622A5549C0073B968 /* Charts.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		0979C28A22A5550D0073B968 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0979C28622A5549C0073B968 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		099EBC8C22A68D8100AB5B21 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099EBC8922A68D7800AB5B21 /* Charts.framework */; };
 		3DEC6BE1228B961B00106856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE0228B961B00106856 /* AppDelegate.swift */; };
 		3DEC6BE3228B961B00106856 /* ThisWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE2228B961B00106856 /* ThisWeekViewController.swift */; };
 		3DEC6BE6228B961B00106856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE4228B961B00106856 /* Main.storyboard */; };
@@ -29,29 +28,23 @@
 		89EA20202294CC3200D4BB72 /* JobReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA201F2294CC3200D4BB72 /* JobReportViewController.swift */; };
 		89EA20222294CC7700D4BB72 /* JobViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA20212294CC7700D4BB72 /* JobViewController.swift */; };
 		89EA20242294CCCC00D4BB72 /* EditTimeEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89EA20232294CCCC00D4BB72 /* EditTimeEntryViewController.swift */; };
+		A4C942E6CE8900CE19B9D67A /* Pods_TimeKeeper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9C6FC3726CB7B7510D919D3 /* Pods_TimeKeeper.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0979C28522A5549C0073B968 /* PBXContainerItemProxy */ = {
+		099EBC8822A68D7800AB5B21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0979C28022A5549B0073B968 /* Charts.xcodeproj */;
+			containerPortal = 099EBC8322A68D7700AB5B21 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
 			remoteInfo = Charts;
 		};
-		0979C28722A5549C0073B968 /* PBXContainerItemProxy */ = {
+		099EBC8A22A68D7800AB5B21 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0979C28022A5549B0073B968 /* Charts.xcodeproj */;
+			containerPortal = 099EBC8322A68D7700AB5B21 /* Charts.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
 			remoteInfo = ChartsTests;
-		};
-		0979C28B22A5550D0073B968 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0979C28022A5549B0073B968 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = A58A4ED274A941CA248EA921;
-			remoteInfo = Charts;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -62,7 +55,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				0979C28A22A5550D0073B968 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +62,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0979C28022A5549B0073B968 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		099EBC8322A68D7700AB5B21 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Downloads/Charts-master-3/Charts.xcodeproj"; sourceTree = "<group>"; };
+		32B800BE7583722F5F304DA0 /* Pods-TimeKeeper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeper.release.xcconfig"; path = "Target Support Files/Pods-TimeKeeper/Pods-TimeKeeper.release.xcconfig"; sourceTree = "<group>"; };
 		3DEC6BDD228B961B00106856 /* TimeKeeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeKeeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DEC6BE0228B961B00106856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DEC6BE2228B961B00106856 /* ThisWeekViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisWeekViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +86,8 @@
 		89EA201F2294CC3200D4BB72 /* JobReportViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobReportViewController.swift; sourceTree = "<group>"; };
 		89EA20212294CC7700D4BB72 /* JobViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobViewController.swift; sourceTree = "<group>"; };
 		89EA20232294CCCC00D4BB72 /* EditTimeEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTimeEntryViewController.swift; sourceTree = "<group>"; };
+		8BDF6E36D72825CCB192C121 /* Pods-TimeKeeper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TimeKeeper.debug.xcconfig"; path = "Target Support Files/Pods-TimeKeeper/Pods-TimeKeeper.debug.xcconfig"; sourceTree = "<group>"; };
+		D9C6FC3726CB7B7510D919D3 /* Pods_TimeKeeper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TimeKeeper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,27 +95,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0979C28922A5550D0073B968 /* Charts.framework in Frameworks */,
+				099EBC8C22A68D8100AB5B21 /* Charts.framework in Frameworks */,
+				A4C942E6CE8900CE19B9D67A /* Pods_TimeKeeper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0979C28122A5549B0073B968 /* Products */ = {
+		099EBC8422A68D7700AB5B21 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0979C28622A5549C0073B968 /* Charts.framework */,
-				0979C28822A5549C0073B968 /* ChartsTests.xctest */,
+				099EBC8922A68D7800AB5B21 /* Charts.framework */,
+				099EBC8B22A68D7800AB5B21 /* ChartsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		0F5125E3E2AB1861C52E68E0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BDF6E36D72825CCB192C121 /* Pods-TimeKeeper.debug.xcconfig */,
+				32B800BE7583722F5F304DA0 /* Pods-TimeKeeper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3AC85AB9C2A8AB4EE84D1132 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9C6FC3726CB7B7510D919D3 /* Pods_TimeKeeper.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3DEC6BD4228B961A00106856 = {
 			isa = PBXGroup;
 			children = (
+				099EBC8322A68D7700AB5B21 /* Charts.xcodeproj */,
 				3DEC6BDF228B961B00106856 /* TimeKeeper */,
 				3DEC6BDE228B961B00106856 /* Products */,
+				0F5125E3E2AB1861C52E68E0 /* Pods */,
+				3AC85AB9C2A8AB4EE84D1132 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -140,7 +156,6 @@
 				8927DE45228E477C00D29CC9 /* Objects */,
 				3DEC6BE0228B961B00106856 /* AppDelegate.swift */,
 				3DEC6BE4228B961B00106856 /* Main.storyboard */,
-				0979C28022A5549B0073B968 /* Charts.xcodeproj */,
 				3DEC6BE7228B961B00106856 /* Assets.xcassets */,
 				3DEC6BE9228B961B00106856 /* LaunchScreen.storyboard */,
 				3DEC6BEC228B961B00106856 /* Info.plist */,
@@ -192,15 +207,16 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3DEC6BEF228B961B00106856 /* Build configuration list for PBXNativeTarget "TimeKeeper" */;
 			buildPhases = (
+				4A36D4F6F5DDD891A9A0E0FE /* [CP] Check Pods Manifest.lock */,
 				3DEC6BD9228B961B00106856 /* Sources */,
 				3DEC6BDA228B961B00106856 /* Frameworks */,
 				3DEC6BDB228B961B00106856 /* Resources */,
 				0979C28D22A5550E0073B968 /* Embed Frameworks */,
+				82E40480951DC4D40C3B5AD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0979C28C22A5550D0073B968 /* PBXTargetDependency */,
 			);
 			name = TimeKeeper;
 			productName = TimeKeeper;
@@ -235,8 +251,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 0979C28122A5549B0073B968 /* Products */;
-					ProjectRef = 0979C28022A5549B0073B968 /* Charts.xcodeproj */;
+					ProductGroup = 099EBC8422A68D7700AB5B21 /* Products */;
+					ProjectRef = 099EBC8322A68D7700AB5B21 /* Charts.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -247,18 +263,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		0979C28622A5549C0073B968 /* Charts.framework */ = {
+		099EBC8922A68D7800AB5B21 /* Charts.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Charts.framework;
-			remoteRef = 0979C28522A5549C0073B968 /* PBXContainerItemProxy */;
+			remoteRef = 099EBC8822A68D7800AB5B21 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		0979C28822A5549C0073B968 /* ChartsTests.xctest */ = {
+		099EBC8B22A68D7800AB5B21 /* ChartsTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = ChartsTests.xctest;
-			remoteRef = 0979C28722A5549C0073B968 /* PBXContainerItemProxy */;
+			remoteRef = 099EBC8A22A68D7800AB5B21 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -275,6 +291,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4A36D4F6F5DDD891A9A0E0FE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TimeKeeper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		82E40480951DC4D40C3B5AD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeKeeper/Pods-TimeKeeper-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TimeKeeper/Pods-TimeKeeper-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TimeKeeper/Pods-TimeKeeper-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DEC6BD9228B961B00106856 /* Sources */ = {
@@ -302,14 +360,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		0979C28C22A5550D0073B968 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Charts;
-			targetProxy = 0979C28B22A5550D0073B968 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3DEC6BE4228B961B00106856 /* Main.storyboard */ = {
@@ -449,6 +499,7 @@
 		};
 		3DEC6BF0228B961B00106856 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BDF6E36D72825CCB192C121 /* Pods-TimeKeeper.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -468,6 +519,7 @@
 		};
 		3DEC6BF1228B961B00106856 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32B800BE7583722F5F304DA0 /* Pods-TimeKeeper.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
