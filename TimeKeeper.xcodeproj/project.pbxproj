@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		099EBC8C22A68D8100AB5B21 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 099EBC8922A68D7800AB5B21 /* Charts.framework */; };
 		099EBCA622A6FE6700AB5B21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 099EBCA522A6FE6700AB5B21 /* GoogleService-Info.plist */; };
 		3DEC6BE1228B961B00106856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE0228B961B00106856 /* AppDelegate.swift */; };
 		3DEC6BE3228B961B00106856 /* ThisWeekViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DEC6BE2228B961B00106856 /* ThisWeekViewController.swift */; };
@@ -97,7 +96,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				099EBC8C22A68D8100AB5B21 /* Charts.framework in Frameworks */,
 				A4C942E6CE8900CE19B9D67A /* Pods_TimeKeeper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
